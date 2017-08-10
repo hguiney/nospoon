@@ -1,13 +1,13 @@
 <?php
 try {
-// require($_SERVER['DOCUMENT_ROOT'] . 'includes/aws/search/coverart.php');
-// $coverArt = new AmazonCoverArt('B0064NTZJO', 'DVD', 'medium');
-// $product = $coverArt->getArray();
-$product = array(
+require($_SERVER['DOCUMENT_ROOT'] . 'includes/aws/search/coverart.php');
+$coverArt = new AmazonCoverArt('B0064NTZJO', 'DVD', 'medium');
+$product = $coverArt->getArray();
+/*$product = array(
 	'url' => 'http://ecx.images-amazon.com/images/I/51eawS9K0qL._SL160_.jpg',
 	'page_url' => 'http://www.amazon.com/Drive-UltraViolet-Digital-Copy-Blu-ray/dp/B0064NTZJO%3FSubscriptionId%3DAKIAIH55RAJODGWTXQLQ%26tag%3Dnospotv-20%26linkCode%3Dsp1%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0064NTZJO'
-);
-// include($_SERVER['DOCUMENT_ROOT'] . 'includes/content/header.php');
+);*/
+//include($_SERVER['DOCUMENT_ROOT'] . 'includes/content/header.php');
 ?>
 <article id="drive" class="review">
 <header>

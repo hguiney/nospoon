@@ -78,6 +78,6 @@ let $topic :=
 
 <ovml:ovml xmlns="http://vocab.nospoon.tv/ovml#" xmlns:ovml="http://vocab.nospoon.tv/ovml#">
 	<post>
-		{util:base64-decode(xs:string(request:get-data()))}
+		{request:get-data()}
 	</post>
 </ovml:ovml>
