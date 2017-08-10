@@ -1,0 +1,28 @@
+/* Dark */
+
+html {
+	background: #0c0c0c;
+}
+
+html * {
+	color:#C3C3C3;
+}
+
+article
+{
+	border: 0;
+}
+
+article.featured,
+article.short:hover {
+	background:rgba(40,40,40,.8); /*#282828*/
+}
+
+a, a:visited, a:hover, a time, dd a cite {
+	color:#ffff8c;
+}
+
+header a[rel="bookmark"],
+header a[rel="bookmark"]:hover {
+	color:inherit;
+}

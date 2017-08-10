@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Video Player</title>
+<link href="http://style.nospoon.tv/themes/reset" rel="stylesheet" />
+<style>
+/*@font-face {
+    font-family: 'Symbola';
+    src: url('symbola-custom-webfont.eot');
+    src: url('symbola-custom-webfont.eot?iefix') format('eot'),
+         url('symbola-custom-webfont.woff') format('woff'),
+         url('symbola-custom-webfont.ttf') format('truetype'),
+         url('symbola-custom-webfont.svg#webfont1XkPlZ7d') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+body {
+	/*font-family:'Symbola', sans-serif !important;*/
+	font-family:Helvetica, sans-serif;
+	font-size:100%;
+	line-height:1.5;
+	background-color:#999;
+}
+
+.player .timeshift input[type=radio] {
+	display:none;
+}
+
+.controls ul,
+.controls li,
+.controls li > * {
+	display:inline;
+	list-style:none;
+}
+
+/*.metadata {
+	display:none;
+}*/
+
+.player {
+	width:864px;
+	height:530px; /* 480 video + 38 controls */
+	/*padding:1.25em 5em 1.5em 1.25em;*/
+	padding:1.25em 1.5em;
+	border-radius:1em;
+	margin:1em;
+}
+.player {
+background: #45484d; /* old browsers */
+background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* firefox */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* webkit */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* ie */
+}
+
+.player .timeshift button {
+background: #e570e7; /* old browsers */
+background: -moz-linear-gradient(top, #e570e7 0%, #c85ec7 47%, #a849a3 100%); /* firefox */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e570e7), color-stop(47%,#c85ec7), color-stop(100%,#a849a3)); /* webkit */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 ); /* ie */
+}
+
+.player video {
+border:5px solid #000;
+border-radius:.5em;
+}
+
+.seekbar {
+	position:relative;
+}
+
+.seekbar .seek,
+.seekbar progress  {
+	position:absolute;
+	top:0;
+	left:0;
+	width:640px;
+}
+
+.seek {
+	z-index:1;
+}
+
+.player,
+.player .timeshift button {
+	border-radius:.25em;
+	border:1px solid black;
+	border-bottom-color:rgba(255,255,255,0.25);
+	-webkit-box-shadow:rgba(255,255,255,0.25) 0 0 10px, inset rgba(255,255,255,0.25) 1px 1px 2px;
+}
+
+.player .timeshift button {
+	padding:.25em;
+	width:1.75em;
+}
+
+.play:focus,
+.play:hover {
+	outline:none;
+	/*-webkit-box-shadow:rgba(255,255,255,0.75) 0 0 20px, inset rgba(255,255,255,0.25) 1px 1px 2px;;*/
+}
+
+progress {
+	background-color:#333;
+	color:#333;
+}
+
+.player .timeshift button,
+.seekbar {
+	font-size:1.5em;
+}
+
+/*progress,
+progress::-webkit-progress-bar-value {
+   -webkit-appearance: none;
+}
+*/
+
+.player {
+	position:relative;
+}
+
+.player h3 {
+	background-color:black;
+	background-color:rgba(0,0,0,0.6);
+    color:#f2f2f2;
+	font-weight:bold;
+	overflow:hidden;
+    font-size:1.25em;
+	max-height:25%;
+    position:absolute;
+	padding:2.5% 0;
+	text-align:center;
+    top:4%;
+	opacity:0;
+    -webkit-transition:opacity .25s linear;
+    -moz-transition:opacity .25s linear;
+    -o-transition:opacity .25s linear;
+	border-radius:.25em;
+    width:864px;
+}
+
+.player h3 a {
+	color:white;
+	text-decoration:none;
+}
+
+.player h3 a:hover {
+	text-decoration:underline;
+}
+
+.player h3 a:visited {
+    color:#f2f2f2;
+}
+
+/*.player .share {
+	background-color:black;
+	background-color:rgba(0,0,0,0.6);
+    color:#f2f2f2;
+	font-weight:bold;
+	overflow:hidden;
+    font-size:1.25em;
+	max-height:25%;
+    position:absolute;
+	padding:2.5% 2.5%;
+	text-align:center;
+    bottom:25%;
+	opacity:0;
+    -webkit-transition:opacity .25s linear;
+    -moz-transition:opacity .25s linear;
+    -o-transition:opacity .25s linear;
+	border-radius:.25em;
+    width:90%;
+	z-index:1;
+}*/
+
+.player h3::before {
+	content:'You’re Watching: ';
+	display:inline;
+}
+
+.player h3:hover,
+.player .share:hover {
+    opacity:1;
+}
+
+.player .seekbar + dl {
+	/*margin-left:640px;*/
+	position:absolute;
+	right:0;
+}
+
+.player .seekbar + dl dt,
+.player .seekbar + dl dd {
+	display:inline;
+	color:white;
+}
+
+.player .seekbar + dl dt {
+	display:none; /* change to SR-friendly*/
+}
+
+.player .seekbar + dl dd:first-of-type::after {
+	content:' / ';
+}
+</style>
+</head>
+
+<body>
+<article id="big-buck-bunny" class="watch">
+
+<figure class="player">
+
+<!--<p><progress class="load" value="0">Loading…</progress></p>-->
+<h3><a href="#" title="Direct link to this video"><cite>Big Buck Bunny</cite> (2008)</a></h3>
+<video width="854" height="480" controls="controls">
+<source src="../media/video.avi" type="video/avi; codecs=&quot;avc1.4D401E, mp4a.40.2&quot;" />
+<source src="../media/video.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;" />
+<source src="../media/video.ogg" type="video/ogg; codecs=&quot;theora, vorbis&quot;" />
+
+<object type="application/x-shockwave-flash" width="656" height="385" data="/player.swf?video=id">
+<param name="movie" value="/player.swf?video=id" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="true" />
+</object>
+</video>
+
+<menu class="controls">
+<li>
+<nav class="timeshift">
+<ul>
+<li><label><input type="radio" name="control" value="play" /> <button class="play" title="Play" autofocus>▶</button></label></li>
+<li><label><input type="radio" name="control" value="stop" /> <button class="stop" title="Stop">■</button></label></li>
+<!--<li><button class="pause" title="Pause">‖</button></li>-->
+<!--<li><button class="rw" title="Rewind">⏪</button></li>
+<li><button class="ff" title="Fast-forward">⏩</button></li>-->
+<li>
+
+<span class="seekbar"><input class="seek" title="Seek" type="range" value="0" step="any" /><progress title="Position" value="0"></progress></span>
+
+<dl>
+
+<dt>Current</dt>
+<dd><var>00:00</var></dd>
+
+<dt>Remaining</dt>
+<dd><var>00:00</var></dd>
+
+</dl>
+
+</li>
+</ul>
+
+</nav>
+</li>
+
+<!--<li><button class="mute" title="Mute">&#x1f507;</button> <input class="volume" title="Volume" type="range" min="0" value="0.5" step="0.1" max="1" /> <button class="blast" title="Blast">&#x1f50a;</button></li>-->
+
+<!--<li><input class="channel" title="Channel" type="number" min="01" value="03" step="1" max="99" /></li>-->
+
+<!--<li>
+<details class="download">
+<summary><button title="Eject">&#x23cf;</button></summary>
+<dl>
+
+<dt><abbr class="initialism" title="High Quality">HQ</abbr></dt>
+<dd><a href="video.avi">W×Hp AVC/AAC AVI</a> (79.08 <abbr title="mebibytes">MiB</abbr>)</dd>
+
+<dt><abbr class="initialism" title="Standard Quality">SQ</abbr>, <abbr class="initialism" title="High Quality">HQ</abbr></dt>
+<dd><a href="video.swf">W×Hp AVC/AAC SWF</a> (1.08 <abbr title="kibibytes">KiB</abbr>)</dd>
+
+<dt>Mobile</dt>
+<dd><a href="rtsp:">W×Hp H.263/AMR 3GP</a> (Streaming)</dd>
+<dd><a href="rtsp:">W×Hp MPEG-4/AAC 3GP</a> (Streaming)</dd>
+
+</dl>
+</details>
+</li>-->
+
+</menu>
+
+<figcaption class="metadata">
+
+<section class="about">
+
+<p>Description</p>
+
+<dl class="stats">
+
+<dt>Classification</dt>
+<dd>Drama</dd>
+
+<dt>Running Time</dt>
+<dd>22:07</dd>
+
+<dt>Content Rating</dt>
+<dd>L+</dd>
+
+<dt>Views</dt>
+<dd>19,028</dd>
+
+</dl>
+</section>
+
+<section class="social">
+<h4>Social</h4>
+
+<menu class="actions">
+<li class="interact">
+	<menu>
+	<li><button type="submit" class="up" name="vote" title="Vote Up" value="1">▲</button> <abbr title="19,000 votes up">+19K</abbr></li>
+	<li><button type="submit" class="down" name="vote" title="Vote Down" value="-1">▼</button> <abbr title="2 votes down">-2</abbr></li>
+	<li><button type="submit" class="favorite" name="favorite" value="1">★</button><!--☆--></li>
+	</menu>
+</li>
+<li class="share"><!--<button>-->Share<!--</button>-->
+	<menu>
+	<li>E-mail</li>
+	<li>Twitter</li>
+	<li>Facebook</li>
+	<li><label>Your Website <input type="text" readonly value="&lt;iframe&gt;" /></label></li>
+	</menu>
+</li>
+</menu>
+
+</section>
+
+</figcaption>
+
+</figure>
+
+</article>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+var video = $('.player video').get(0);
+var seekbar = $('.player .seek').get(0);
+var progressbar = $('.player .timeshift progress').get(0);
+var volume = $('.player .volume').get(0);
+
+seekbar.value = 0;
+video.controls = false;
+
+function setupSeekbar(e) {
+  seekbar.min = video.startTime;
+  seekbar.max = video.startTime + video.duration;
+  
+  progressbar.max = video.startTime + video.duration;
+}
+video.ondurationchange = setupSeekbar;
+
+function seekvideo(e) {
+  video.currentTime = seekbar.value;
+}
+
+function updateUI(e) {
+  var lastBuffered = video.buffered.end(video.buffered.length-1);
+  seekbar.min = video.startTime;
+  seekbar.max = lastBuffered;
+  seekbar.value = video.currentTime;
+  
+  progressbar.max = lastBuffered;
+  progressbar.value = video.currentTime;
+}
+
+video.onvolumechange = function(e) {
+  //mutebutton.value = video.muted ? 'Muted' : 'Unmuted';
+  volume.value = video.volume;
+}
+function updateVolume(e) {
+  video.volume = volume.value;
+}
+
+seekbar.onchange = seekvideo;
+progressbar.onchange = seekvideo;
+video.ontimeupdate = updateUI;
+
+video.addEventListener('durationchange', setupSeekbar, false);
+video.addEventListener('timeupdate', updateUI, false);
+
+$('.play').click(playPause);
+
+//$('.pause').click(pause);
+
+//$('.stop').click(stop_video);
+
+//$('.mute').click(mute);
+
+//$('.seek').change(seekvideo);
+
+//$('.blast').click(blast);
+
+//$('.volume').change(changeVolume);
+
+function changeVolume(e) {
+video.volume = volume.value;
+return false;
+}
+
+function playPause(e) {
+	if(video.paused) {
+		video.play();
+		//$(this).text('❚❚');
+		$(this).text('‖');
+		$(this).attr('title', 'Pause');
+	} else {
+		video.pause();
+		$(this).text('▶');
+		$(this).attr('title', 'Play');
+	}
+}
+
+function play(e) {
+if(video.paused) {
+video.play();
+} else {
+return false;
+}
+return false;
+};
+
+function pause(e) {
+if(video.paused) {
+return false;
+} else {
+video.pause();
+}
+return false;
+};
+
+function stop_video(e) {
+video.currentTime = 0;
+video.pause();
+return false;
+};
+
+function mute(e) {
+if(video.volume > 0) {
+video.volume = 0;
+} else {
+return false;
+}
+return false;
+};
+
+function blast(e) {
+if(video.volume < 1) {
+video.volume = 1;
+} else {
+return false;
+}
+return false;
+};
+//]]>
+</script>
+</body>
+</html>

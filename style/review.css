@@ -12,28 +12,9 @@
 {
 	font-family: inherit;
 	font-weight: inherit;
-	font-size: 1.25em;
 }
 
-#main > header > hgroup[aria-level] > * + *
-{
-	font-size: .75em;
-}
-
-@media only screen and (min-width: 70em)
-{
-	#main > header > hgroup > * + *
-	{
-		font-size: 1.5em;
-	}
-	
-	#main > header > hgroup[aria-level] > * + *
-	{
-		font-size: .9em;
-	}
-}
-
-.review > header > hgroup > * + * .preposition
+.review > header > hgroup > * + * > span
 {
 	font-style:italic;
 }
@@ -41,23 +22,11 @@
 .review > header > hgroup
 {
 	margin-bottom: .75em;
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	/*text-align: left;*/
-}
-
-@media only screen and (min-width: 70em)
-{
-	.review > header > hgroup
-	{
-		text-align: center;
-	}
 }
 
 .review > header
 {
-	margin-bottom:1.5em;
+	margin-bottom:1em;
 }
 
 .review > header > img /*figure*/
@@ -69,7 +38,8 @@
 
 #overview
 {
-	
+	margin-bottom:1.5em;
+	margin-top:1.5em;
 }
 
 #overview,
@@ -141,14 +111,9 @@ dt.starring ~ dt ~ dd:before {
 	margin-left:0;
 }*/
 
-dt.director + dd
-{
-	/*white-space:nowrap;*/
-}
-
 dl.at-a-glance > di > dd:not(:last-child):after
 {
-	content: ',\20';
+	content: ', ';
 }
 
 .entry-content
@@ -213,15 +178,14 @@ figcaption
 	/*margin-bottom: 1.5em;*/
 }
 
-/*#overview > .content > .group
+#overview > .content > .group
 {
 	float: left;
-}*/
+}
 
 #mentioned > .content > ul > li > article > header > a > hgroup > *
 {
 	margin-bottom:0;
-	font-weight:800;
 }
 
 #mentioned > .content > header > hgroup > *
@@ -336,68 +300,12 @@ figcaption
 {
 	/*border-top:2px dashed rgba(16,16,16,.75);
 	border-bottom:2px dashed rgba(16,16,16,.75);*/
-	/*padding:1.5em 0;*/
-}
-
-#publication-details > .content
-{
-	max-width:100%;
-}
-
-#publication-details p
-{
-	padding-left: 3.8em;
-}
-
-.decorative + p
-{
-	text-align:center;
-	font-size:1.2em;
-	margin:1.5em auto;
-	max-width:29em;
-}
-
-#publication-details p svg
-{
-	float: left;
-	margin: .25em 1em 0;
-	margin-left: -3.8em;
+	padding:1.5em 0;
 }
 
 .review > header > hgroup > *:first-child
 {
-	font-size: 5rem;
-}
-
-#responses > .content > ol
-{
-	margin: 0 auto;
-	font-size: 1.1em;
-	list-style: none;
-	padding: 0;
-	max-width: 29em;
-	text-align: center;
-}
-
-/*#responses > .content > ol > li > */
-blockquote
-{
-	border: 0;
-	padding: 0;
-	margin: 0;
-}
-
-/*#responses > .content > ol > li >*/
-blockquote > p
-{
-	margin-bottom: .75em;
-	text-align: justify;
-}
-
-/*#responses > .content > ol > li >*/
-blockquote + p
-{
-	text-align: right;
+	font-size: 4rem;
 }
 
 .video-thumbnails .summary
@@ -409,33 +317,13 @@ blockquote + p
 #mentioned > .content > ul > li > article > header > a > img
 {
 	display:block;
-	margin-top: .5rem;
 	margin-bottom: .75em;
 }
 
-.ranking
+#mentioned > .content > ul > li > article > header > a > hgroup
+, #mentioned > .content > ul > li > article > header > a + div
 {
-	display: block;
-	margin: .125em 0;
-}
-
-@media only screen and (min-width: 50em)
-{
-	#mentioned > .content > ul > li > article > header > a > hgroup
-	, .ranking
-	{
-		display:inline-block;
-	}
-	
-	#mentioned > .content > ul > li > article > header > a > hgroup
-	{
-		/*margin-left: .125em;*/
-	}
-	
-	.ranking
-	{
-		margin: 0;
-	}
+	display:inline-block;
 }
 
 #author-id > address > dl
@@ -488,10 +376,7 @@ article[role="main"] > /* .content > */ header /*:first-of-type but shouldn't be
 
 #overview dl > di > dd > img
 {
-	width:100px;
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
+	width:20%;
 }
 
 @media only screen and (min-width: 480px) {
@@ -520,7 +405,7 @@ article[role="main"] > /* .content > */ header /*:first-of-type but shouldn't be
 	
 	#author-id
 	{
-		/*margin-right: 1.5em;*/
+		margin-right: 1.5em;
 		min-height: 100px;
 	}
 	
@@ -601,10 +486,10 @@ dl.at-a-glance > di > dd:not(:last-child):after
      margin:.25em 0;
 }
 
-/*.video-thumbnails .buy a
+.video-thumbnails .buy a
 {
      font-weight:bold;
-}*/
+}
 
 /*.video-thumbnails .buy a.amazon:hover
 {
@@ -668,8 +553,8 @@ body > .content
 
 #main div[id]
 {
-	/*margin-top:1.5em;
-	margin-bottom:1.5em;*/
+	margin-top:1.5em;
+	margin-bottom:1.5em;
 }
 
 #about > *
@@ -684,81 +569,11 @@ body > .content
 	padding-right: 1.5em;
 }
 
-.avatar
-{
-	border: 1px solid rgb(16,16,16);
-	box-shadow: 5px 5px 0 rgba(16,16,16,.25);
-	box-sizing:content-box;
-}
-
 #overview + .group
 {
 	/*border: 2px dashed rgb(16,16,16);*/
 	border-left: 0;
 	padding:1.5em;
-}
-
-#overview > .content > section
-{
-	float:left;
-	clear:none;
-	margin-top: 1.5em;
-}
-
-#overview > .content > section > *:last-child
-{
-	margin-bottom:0;
-}
-
-#overview > .content > section:first-of-type
-{
-	width: 51%;
-}
-
-#overview > .content > section:nth-of-type(2)
-, #publication-details
-{
-	width: 49%;
-}
-
-dl.at-a-glance
-{
-	margin-bottom:0;
-}
-
-dl.at-a-glance > di
-{
-	float:left;
-	width: 100%;
-}
-
-dl.at-a-glance > di > dt
-{
-	display:block;
-	margin-right:0;
-}
-
-dl.at-a-glance > di > dd
-{
-	display:inline;
-}
-
-dl.at-a-glance > di:first-child
-, dl.at-a-glance > di:nth-child(2)
-, dl.at-a-glance > di:nth-child(3)
-{
-	width: 25%;
-}
-
-dl.at-a-glance > di:last-child
-{
-	max-width:100%;
-	margin: 0;
-}
-
-#the-film
-{
-	padding-right:1.5em;
 }
 
 #content
@@ -772,27 +587,21 @@ dl.at-a-glance > di:last-child
      background:black;
      padding:0 1.05rem;
 }
-
-#author p
-{
-	max-width: 29em;
-}
 }
 
+@media only screen and (min-width: 960px) {
 .entry-content > p:first-child
 {
 	font-size:1.25em;
 	/*margin-bottom:1.25em;*/
 }
 
-@media only screen and (min-width: 40em)
+.entry-content > p:first-child:first-line
 {
-	.entry-content > p:first-child:first-line
-	{
-	     font-size:5rem;
-	     text-align:left;
-		 line-height:1;
-	}
+     font-size:5rem;
+     text-align:left;
+	 line-height:1;
+}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -819,6 +628,6 @@ dl.at-a-glance > di:last-child
 
 #mentioned > .content > ul > li
 {
-     margin:1.5em 1.5em 0 0;
+     margin:0 1.5em 1.5em 0;
 }
 }

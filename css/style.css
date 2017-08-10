@@ -1,0 +1,417 @@
+@import url('baseline.css');
+@import url('font-face.css');
+
+/* 320
+
+_____________________________________________________
+
+320 and Up boilerplate extension
+
+Author: Andy Clarke
+Version: 0.9b
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+License: http://creativecommons.org/licenses/MIT/
+_____________________________________________________
+
+1.ROOT
+2.HEADINGS
+3.TYPOGRAPHY
+4.LINKS
+5.FIGURES & IMAGES
+6.TABLES
+7.FORMS (See css/mylibs/forms.css)
+8.BANNER — header[role="banner"]
+9.NAVIGATION — nav[role="navigation"]
+10.CONTENT
+11.MAIN — div[role="main"]
+12.COMPLIMENTARY — div[role="complementary"]
+13.CONTENTINFO — footer[role="contentinfo"]
+14.GLOBAL OBJECTS
+15.VENDOR-SPECIFIC 
+16.TEMPLATE SPECIFICS
+17.MODERNIZR
+
+*/
+
+/* 1.ROOT */
+
+html {
+	font-size:62.5%;
+}
+
+body
+{
+	min-width: 320px;
+	font-size:16px;
+	font-size:1.6rem;
+}
+
+/* 2.HEADINGS */
+
+h1
+{
+/*
+	font-size:66px;
+	font-size:6.6rem;
+*/
+	margin-bottom:16px;
+	margin-bottom:1.6rem;
+}
+
+h2
+{
+/*
+	font-size:56px;
+	font-size:5.6rem;
+*/
+	margin-bottom:7px;
+	margin-bottom:.7rem;
+}
+
+h2:hover
+{
+	color: #000;
+}
+
+h3
+{
+/*
+	font-size:32px;
+	font-size:3.2rem;
+*/
+	margin-bottom:8px;
+	margin-bottom:.8rem;
+}
+
+header > a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+{
+	text-decoration: none;
+}
+
+header[role="banner"]
+{
+	margin:0 16px 16px;
+	margin:0 1.6rem 1.6rem;
+}
+
+header[role="banner"] img
+{
+	margin: 0 2.5rem 0 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header[role="banner"] h1
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* 3.TYPOGRAPHY */
+
+body {
+	font-family:Georgia, serif;
+}
+
+h1 cite, h2 cite, h3 cite, h4 cite, h5 cite, h6 cite
+{
+	/*font-style: normal;*/
+	/*quotes: '\201C' '\201D' '\2018' '\2019';*/
+}
+
+/*
+h1 cite::after, h2 cite::after, h3 cite::after, h4 cite::after, h5 cite::after, h6 cite::after
+{
+	content: close-quote;
+}
+
+h1 cite::before, h2 cite::before, h3 cite::before, h4 cite::before, h5 cite::before, h6 cite::before
+{
+	content: open-quote;
+}
+*/
+
+h1, h2, h3, h4, h5, h6
+{
+	-moz-font-feature-settings: liga=1;
+	font-family: "Ubuntu";
+	font-weight:700;
+	margin-top: 0;
+}
+
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span
+{
+	font-weight:400;
+}
+
+/* 4.LINKS */
+
+a,
+a:visited
+{
+	color: rgb(40,40,40);
+	text-decoration:underline;
+}
+
+a:hover {
+	color:rgb(0,0,0);
+	text-decoration:none;
+}
+
+a[rel="tag"]
+{
+	-webkit-transition: opacity .25s ease-out;
+	border-radius:13px;
+	border-radius:1.3rem;
+	color: #FFF;
+	background: #000;
+	cursor: pointer;
+	font-family: sans-serif;
+	font-size: 13px;
+	font-size:1.3rem;
+	opacity: .5;
+	padding: 3px 13px;
+	padding:.3rem 1.3rem;
+	text-decoration: none;
+}
+
+a[rel="tag"]:hover
+{
+	-webkit-transition: opacity .25s ease-in;
+	opacity: 1;
+}
+
+footer a
+{
+	color:#405c80;
+}
+
+/* 5.FIGURES & IMAGES */
+
+article header a p /*img*/
+{
+	float: left;
+	background: #000;
+	margin-left:-224px; margin-left:-22.4rem !important;
+	margin-right: 24px; margin-right:2.4rem !important;
+	
+	/* Defaults - Get overridden inline if AR is different? */
+	width:200px; width:20rem;
+	height:150px; height:15rem;
+}
+
+article header a p img {
+	width:100%;
+	height:auto;
+	vertical-align:middle;
+}
+
+figcaption
+{
+	font-style: italic;
+}
+
+figcaption cite, figcaption i
+{
+	font-style: normal;
+}
+
+figcaption, figcaption p, figcaption blockquote
+{
+	max-width: 640px;
+	text-align: center;
+	width: 640px;
+}
+
+/* 6.TABLES */
+/* 7.FORMS (See css/mylibs/forms.css) */
+/* 8.BANNER */
+/* 9.NAVIGATION */
+
+nav ul {
+	display: box;
+}
+
+nav li {
+	box-flex: 1;
+}
+
+/* 10.CONTENT */
+
+#home {
+	column-count: 3;
+	column-gap: 10px;
+	min-height:1080px; min-height: 10.8rem;
+	min-width:710px; min-width:71rem;
+}
+
+#home article
+{
+	min-width:50%;
+	max-width:480px; max-width:48rem;
+	padding: 16px 16px 32px;
+	padding:1.6rem; /* 1.6rem 3.2rem;*/
+	column-break-inside: avoid;
+	margin: 16px 0; margin:1.6rem 0;
+}
+
+#home article.featured {
+	column-span:all;
+	max-width:100%;
+}
+
+#home article.featured + article {
+	margin-top:0;
+}
+
+#home article header img {
+	width:480px; width:48rem;
+	max-width:100%;
+	height:auto;
+}
+
+/*#home article footer + p
+{
+	margin-top: 8px;
+	margin-top:.8rem;
+}*/
+
+article footer dl
+{
+	overflow:auto;
+}
+
+article footer dl dd
+{
+	float: left;
+	margin-left: 0;
+	width: auto;
+}
+
+article footer dl details.spoiler summary
+{
+	display: inline-block;
+}
+
+article footer dl dt
+{
+	float: left;
+	font-weight: 400;
+	width: auto;
+}
+
+article footer dl dt, article footer dl dd
+{
+	margin: 8px 3px;
+	margin: .8rem .3rem;
+}
+
+/*article footer dl dt.cat,*/
+article.full footer dl dt.pubdate,
+article footer dl dt.tags
+{
+	clear: left;
+}
+
+article header a p
+{
+	margin: 0;
+}
+
+/*article.featured*/
+#home article:hover
+{
+	background: #F0F0F0;
+}
+
+article.full figure
+{
+	margin-left: 0;
+}
+
+article.full figure iframe
+{
+	border: 0;
+}
+
+article.full footer dl dt.pubdate + dd::after
+{
+	content: ' / ';
+}
+
+#home article
+{
+}
+
+#home article footer dl
+{
+	margin-bottom: 0;
+}
+
+/*#home article footer dl dt.cat,
+#home article footer dl dt.tags
+{
+	text-transform: capitalize;
+}*/
+
+article
+{
+	border: 1px solid #000;
+}
+
+details summary
+{
+	cursor: pointer;
+}
+
+details.spoiler[open] summary,
+#home dt:not(.attrib) .implied
+{
+	display: none;
+}
+
+dl, dd
+{
+	margin: 4px 0;
+	margin: .4rem 0;
+}
+
+dt.cat ~ dd + dd::before,
+dt.starring ~ dd + dd::before
+{
+	content: ', ';
+	margin-left: -6px;
+	margin-left: -.6rem; /*.64*/
+}
+
+dt.cat ~ dt ~ dd::before
+dt.starring ~ dd ~ dd::before
+{
+	content: '';
+}
+
+dt.tags ~ dd
+{
+	margin-right: 8px;
+	margin-right: .8rem;
+}
+
+dt.tags ~ dt ~ dd
+{
+	margin-right: inherit;
+}
+
+section
+{
+	border: 2px solid #000;
+	border-left: 0;
+	border-right: 0;
+}
+
+/* 11.MAIN */
+/* 12.COMPLIMENTARY */
+/* 13.CONTENTINFO */
+/* 14.GLOBAL OBJECTS */
+/* 15.VENDOR-SPECIFIC */
+/* 16.TEMPLATE SPECIFICS */
+/* 17.MODERNIZR */

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gradients Ignored on Webkit Pseudo-Elements</title>
+<style>
+progress
+, progress::-webkit-progress-bar
+{
+	-webkit-appearance:none;
+	background:transparent;
+}
+
+progress::-webkit-progress-value
+{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4294e0), color-stop(100%,#2b557c));
+	background: -webkit-linear-gradient(top,  #4294e0 0%,#2b557c 100%);
+	background: linear-gradient(top,  #4294e0 0%,#2b557c 100%);
+}
+</style>
+</head>
+
+<body>
+<h1>Gradients Ignored on Webkit Pseudo-Elements</h1>
+<progress value="50" max="100">50%</progress>
+</section>
+</body>
+</html>

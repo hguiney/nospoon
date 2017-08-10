@@ -1,0 +1,3 @@
+#AddType text/css less
+AddType application/xml ovml
+Options +Indexes +MultiViews

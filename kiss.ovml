@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ovml xmlns="http://ns.nospoon.tv/ovml/v1">
+	<meta>
+		<link rel="glossary" href="/glossary.mdb" />
+	</meta>
+	<video>
+		<title>Twenty-One</title>
+		<runtime unit="min"></runtime>
+		<langs>
+			<lang type="orig">en</lang>
+		</langs>
+		<screenings>
+			<screening dtstart="2010" dtend="ongoing" lang="en" locale="world">
+				<venue type="website">
+					<name>NoSpoon.tv</name>
+					<site>http://nospoon.tv/</site>
+				</venue>
+				<function admission="public" price="0" />
+				<medium>binary</medium>
+			</screening>
+			<screening dtstart="2007" lang="en" locale="US">
+				<venue type="theater">
+					<name>Mountain Cinema</name>
+					<site>http://www.catskillmtn.org/retail/movie-theater/index.html</site>
+				</venue>
+				<function admission="public" price="0">Reel Teens USA</function>
+				<medium>disc</medium>
+				<program type="application/pdf" href="/docs/reel-teens-usa-2007.pdf#page=3" />
+			</screening>
+			<screening dtstart="2006-05-06" lang="en" locale="US"><!-- theatrical | vod | p2p -->
+				<venue href="#ica" />
+				<function admission="public" price="0">“Take A Seat”: 2006 Spring FastForward Screening</function>
+				<medium href="#minidv" />
+				<program />
+			</screening>
+		</screenings>
+		<rights>
+			<holders>
+				<name>Hugh Guiney</name>
+				<name type="company">No Spoon Productions</name>
+			</holders>
+			<license abbr="CC-BY-NC-ND" v="3.0" spec="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+				<title>Creative Commons Attribution-Noncommercial-NoDerivs</title>
+			</license>
+		</rights>
+		<sources>
+			<source xml:id="hq" lang="en" format="binary">
+				<playerimg type="image/png" href="/projects/2006/twenty-one/poster-360.png" />
+				<width>656</width>
+				<height>360</height>
+				<frametype>p</frametype>
+				<par shape="square" />
+				<fps standard="M" />
+				<src xml:id="mp4" container="video/mp4" href="/projects/2006/twenty-one/video.mp4">
+					<component type="video" codec="avc1.42E01E" />
+					<component type="audio" codec="mp4a.40.2">
+						<bitrate>160000</bitrate>
+						<samplerate>48000</samplerate>
+						<bitdepth>24</bitdepth>
+					</component>
+					<description type="html">
+						<div xmlns="http://www.w3.org/1999/xhtml">
+							<p>Originally released in 2006, this 2010 remaster restores the short to its intended aspect ratio, and presents the footage progressively for the first time using a high-quality deinterlacer to optimize the viewing experience on the Web. Compare with <a HREF="http://www.youtube.com/watch?v=6WOipyJgh7Y">the original</a>.</p>
+						</div>
+					</description>
+				</src>
+			</source>
+			<source xml:id="raw" lang="en">
+				<medium href="#minidv" />
+				<width>720</width>
+				<height>480</height>
+				<frametype>i</frametype>
+				<par shape="ntsc-ws-anamorphic" />
+				<fps standard="M" />
+				<parent rel="camera" />
+				<child rel="edit" />
+			</source>
+		</sources>
+		<genres>
+			<li>Drama</li>
+			<li>Neo-noir</li>
+		</genres>
+		<content-ratings>
+			<content-rating glossary="#yt" party="1st">
+				<li>L+</li>
+				<li>V</li>
+				<li>D</li>
+			</content-rating>
+		</content-ratings>
+		<description>An individual deals with a recent breakup on Christmas Eve.</description>
+		<recognition>
+			<by href="#ica" type="selection" />
+		</recognition>
+		<production>
+			<tools>
+				<li>Final Cut Pro</li>
+				<li>Canon Optura 40</li>
+			</tools>
+			<tech>
+				<li><medium href="#minidv" /></li>
+				<li>IEEE 1394 (“FireWire”)</li>
+			</tech>
+		</production>
+	</video>
+</ovml>

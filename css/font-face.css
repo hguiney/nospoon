@@ -1,0 +1,166 @@
+/*
+	Font: Accord Alternate
+	Designer: Aakash Soneri <http://www.aakashsoneri.com/>
+	Licensed
+		by: FontSpring <http://www.fontspring.com>
+		to: Hugh Guiney <http://nospoon.tv>
+		on: November 12th, 2011
+		for: Unlimited domains
+*/
+
+@font-face {
+	font-family: 'Accord Alternate'; /* Regular */
+	font-weight: normal;
+	font-style: normal;
+	src:
+		url('mylibs/webfonts/accord-alternate/reg.eot?') format('eot'),
+		url('mylibs/webfonts/accord-alternate/reg.woff') format('woff'),
+		url('mylibs/webfonts/accord-alternate/reg.svg#AccordAlternateRegular') format('svg'),
+		url('mylibs/webfonts/accord-alternate/reg.ttf') format('truetype')
+	;
+}
+
+@font-face {
+	font-family: 'Accord Alternate'; /* Extra Bold */
+	font-weight: bold;
+	font-style: normal;
+	src:
+		url('mylibs/webfonts/accord-alternate/x-bold.eot?') format('eot'),
+		url('mylibs/webfonts/accord-alternate/x-bold.woff') format('woff'),
+		url('mylibs/webfonts/accord-alternate/x-bold.svg#AccordAlternateExtraBold') format('svg'),
+		url('mylibs/webfonts/accord-alternate/x-bold.ttf') format('truetype')
+	;
+}
+
+/*
+	Font: League Gothic Extended
+	Designers
+		Original: Morris Fuller Benton; American Type Founders Company
+		Revival: Micah Rich, Caroline Hadilaksono; The League of Movable Type <http://theleagueofmoveabletype.com/>
+		Extended: Dannci <http://typethefont.com/>
+	Licensed
+		to: The Public Domain
+*/
+
+@font-face {
+	font-family: 'League Gothic Extended'; /* Regular/Bold */
+	font-weight: bold;
+	font-style: normal;
+	src:
+		url('mylibs/webfonts/league-gothic-extended/reg.eot?') format('eot'),
+		url('mylibs/webfonts/league-gothic-extended/reg.woff') format('woff'),
+		url('mylibs/webfonts/league-gothic-extended/reg.svg#LeagueGothicExtendedRegular') format('svg'),
+		url('mylibs/webfonts/league-gothic-extended/reg.ttf') format('truetype')
+	;
+}
+
+@font-face {
+	font-family: 'League Gothic Extended'; /* Regular/Bold Italic */
+	font-weight: bold;
+	font-style: italic;
+	src:
+		url('mylibs/webfonts/league-gothic-extended/italic.eot?') format('eot'),
+		url('mylibs/webfonts/league-gothic-extended/italic.woff') format('woff'),
+		url('mylibs/webfonts/league-gothic-extended/italic.svg#LeagueGothicExtendedItalicRg') format('svg'),
+		url('mylibs/webfonts/league-gothic-extended/italic.ttf') format('truetype')
+	;
+}
+
+
+/*
+	Font: FF Tisa Web Pro
+	Designer: Mitja Miklavčič
+	Licensed
+		by: FSI FontShop International <https://www.fontfont.com>
+		to: Hugh Guiney <http://nospoon.tv>
+		on: November 12th, 2011
+		for: 500,000 page views/month
+*/
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Small Caps Regular */
+	font-weight: normal;
+	font-style: normal;
+	font-variant: small-caps; /* Must be defined first singe legacy browsers will ignore/overwrite */
+	src:
+		url('mylibs/webfonts/ff-tisa-web-pro/sc-reg.eot?') format('eot'),
+		url('mylibs/webfonts/ff-tisa-web-pro/sc-reg.woff') format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Regular */
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	src:
+		url('mylibs/webfonts/ff-tisa-web-pro/reg.eot?') format('eot'),
+		url('mylibs/webfonts/ff-tisa-web-pro/reg.woff') format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Small Caps Italic */
+	font-weight: normal;
+	font-style: italic;
+	font-variant: small-caps;
+	src:
+		url('mylibs/webfonts/ff-tisa-web-pro/sc-italic.eot?') format('eot'),
+		url('mylibs/webfonts/ff-tisa-web-pro/sc-italic.woff') format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Italic */
+	font-weight: normal;
+	font-style: italic;
+	font-variant: normal;
+	src:
+		url('mylibs/webfonts/ff-tisa-web-pro/italic.eot?') format('eot'),
+		url('mylibs/webfonts/ff-tisa-web-pro/italic.woff') format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Small Caps Bold */
+	font-weight: bold;
+	font-style: normal;
+	font-variant: small-caps;
+	src:
+		url('mylibs/webfonts/ff-tisa-web-pro/sc-bold.eot?') format('eot'),
+		url('mylibs/webfonts/ff-tisa-web-pro/sc-bold.woff') format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Bold */
+	font-weight: bold;
+	font-style: normal;
+	font-variant: normal;
+	src:
+		url('mylibs/webfonts/ff-tisa-web-pro/bold.eot?') format('eot'),
+		url('mylibs/webfonts/ff-tisa-web-pro/bold.woff') format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Small Caps Bold Italic */
+	font-weight: bold;
+	font-style: italic;
+	font-variant: small-caps;
+	src:
+		url('mylibs/webfonts/ff-tisa-web-pro/sc-bold-italic.eot?') format('eot'),
+		url('mylibs/webfonts/ff-tisa-web-pro/sc-bold-italic.woff') format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Bold Italic */
+	font-weight: bold;
+	font-style: italic;
+	font-variant: normal;
+	src:
+		url('mylibs/webfonts/ff-tisa-web-pro/bold-italic.eot?') format('eot'),
+		url('mylibs/webfonts/ff-tisa-web-pro/bold-italic.woff') format('woff')
+	;
+}

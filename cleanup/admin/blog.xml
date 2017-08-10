@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+	<title>Space Exploration Ain’t Easy</title>
+	<id>urn:uuid:17757c60-032e-11e1-be50-0800200c9a66</id>
+	<author>
+		<name>Hugh Guiney</name>
+		<email>hugh.guiney@nospoon.tv</email>
+		<uri>http://nospoon.tv/about/authors/hguiney/</uri>
+	</author>
+	<published>2003-12-13T18:30:02Z</published>
+	<updated>2003-12-13T18:30:02Z</updated>
+	<category scheme="http://ns.nospoon.tv/category/" term="featured" label="Featured" />
+	<category scheme="http://ns.nospoon.tv/category/" term="inspirations" label="Inspirations" />
+	<category scheme="http://ns.nospoon.tv/tag/" term="space" />
+	<category scheme="http://ns.nospoon.tv/tag/" term="suit" />
+	<category scheme="http://ns.nospoon.tv/tag/" term="alien" />
+	<category scheme="http://ns.nospoon.tv/tag/" term="recursion" />
+	<summary>A really cool (and dark) short. Love the style.</summary>
+	<content type="xhtml">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>An explorer adventures into an unknown world, yet it seems that he has been there before.</p>
+			<p>A short animated film directed by Malcolm Sutherland in 2010. With music by Alison Melville and Ben Grossman, and foley by Leon Lo. Sound design / mix by Malcolm Sutherland.</p>
+		</div>
+	</content>
+</entry>

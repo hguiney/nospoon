@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video.js | HTML5 Video Player</title>
+<link href="video-js.css" rel="stylesheet" type="text/css">
+<script src="/modernizr.custom.13198.js"></script>
+<!-- video.js must be in the <head> for older IEs to work. -->
+<script src="video.js"></script>
+<style>
+	.seekbar {position:relative;}
+	.seekbar > .seek {z-index:1;}
+	.seekbar > .seek,
+	.seekbar > .time {position:absolute;left:0;}
+</style>
+</head>
+<body>
+<video
+	id="example-video-1"
+	class="video-js vjs-default-skin"
+	preload="none"
+	width="640" height="264"
+	controls="controls"
+	poster="http://video-js.zencoder.com/oceans-clip.png"
+	>
+	<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+	<!--source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' /--> 
+	<!--source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' /--> 
+</video>
+<div class="controls">
+	<button class="play-pause" title="Play">▶</button>
+	<!--<button id="stop" title="Stop">◼</button>--> 
+	<span class="seekbar">
+	<input class="seek" title="Seek" type="range" value="0" step="any" />
+	<progress class="time" title="Position" value="0">
+		<p><span class="value"></span>/<span class="max"></span></p>
+	</progress>
+	<!-- .position --> 
+	</span><!-- .seekbar --> 
+</div>
+<!-- .controls -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function ready() {
+_V_("example-video-1", { "controls": false }).ready(function(){
+	var media = this;
+	var video = $(this);
+	
+	var controls = $('.controls').eq(0);
+	var playPause = controls.find('.play-pause').eq(0);
+	var playPause = controls.find('.play-pause').eq(0);
+	var playIcon = playPause.text() || '▶';
+	var playText = playPause.attr('title') || 'Play';
+	var pauseIcon = playPause.attr('data-pause-icon') || '‖';
+	var pauseText = playPause.attr('data-pause-title') || 'Pause';
+	var seek = controls.find('.seek').eq(0);
+	var progress = controls.find('.time').eq(0); 
+	var currentProgress = progress.find('.value').eq(0);
+	var maxProgress = progress.find('.max').eq(0);
+	
+	/*if(!Modernizr.inputtypes.range){
+		seek.remove();
+	} */ 
+	
+	console.log(seek);
+	
+	// Append controls
+	
+	media.addEvent('loadedmetadata', function mediaLoadedMetadata() {
+		//console.log('video loadedmetadata');
+		var duration = media.duration();
+		progress.attr('max', duration);
+		seek.attr('max', duration);
+		maxProgress.text(duration);
+	});
+	
+	media.addEvent('timeupdate', function mediaTimeUpdate() {
+		//console.log('video onTimeupdate');
+		var currentTime = media.currentTime();
+		seek.val(currentTime);
+		progress.val(currentTime);
+		currentProgress.text(currentTime);
+	}); //, false
+	
+	playPause.on('click', function playPauseClick() {
+		//console.log('playPause onClick');
+		if(media.paused()) {
+			media.play();
+			playPause.text(pauseIcon);
+			playPause.attr('title', pauseText);
+		} else {
+			media.pause();
+			playPause.text(playIcon);
+			playPause.attr('title', playText);
+		}
+	});
+	
+	seek.on('change', function seekChange() {
+		newTime = $(this).val();
+		console.log(newTime);
+		media.currentTime(newTime);
+	});
+});
+});
+</script>
+
+</body>
+</html>
