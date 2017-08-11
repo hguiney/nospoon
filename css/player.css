@@ -1,5 +1,3 @@
-@import url('/css/mylibs/webfonts/stylesheet.css');
-
 .controls
 , .controls menu
 {
@@ -7,101 +5,41 @@
 	margin:0;
 }
 
-.controls button {
-	border-radius:0;
-	color:white;
-	background:black;
-	background:rgba(0,0,0,0.5);
-	border:0;
-	width:31px;
-	height:32px;
-	padding:7px 8px;
-	font-size:18px;
-	box-sizing:border-box;
-}
-
-.controls time
-{
-	/*font-weight:bold;
-	font-size:12px;*/
-}
-
-.controls .play-pause
-{
-	border-right:1px solid rgba(255,255,255,.25);
-}
-
-.controls .divider
-, .controls .duration
-{
-	display:none;
-}
-
-.controls
-{
-	background:black;
-	/*padding:.5em 0;*/
-	color:white;
-}
-
 .controls > *
 , .seekbar > *
 {
 	display:inline-block;
 	vertical-align:middle;
-	padding:0;
-	margin:0;
 }
 
-progress
-{
-	border:0;
-}
-
-.seekbar .seekbar
+html.seekbar .seekbar
 {
 	position:relative;
-	padding:7px 12px 7px 3px;
+	width:160px;
+	height:25px;
 }
 
-.seekbar .seekbar
-, .seekbar .seekbar *
-{
-	width:222px;
-	height:18px;
-	border-radius:1px;
-}
-
-.seekbar .seekbar > .seek
+html.seekbar .seekbar > .seek
 {
 	z-index:2;
+	opacity:1;
+	cursor:pointer;
 }
 
-.seekbar .seekbar > .bar > .playback
+html.seekbar .seekbar > *
 {
-	z-index:1;
-}
-
-.seekbar .seekbar > .bar
-{
-	/*box-shadow:0 0 1px solid black inset, 0 0 0 solid rgba(255,255,255,.75);*/
-	border:1px thin rgba(255,255,255,.75);
-	background:rgba(255,255,255,0.25);
-	border-radius:1px;
-	z-index:0;
-}
-
-.seekbar .seekbar > .seek
-, .seekbar .seekbar > .bar
-, .seekbar .seekbar > .bar > progress
-{
+	width:100%;
+	height:100%;
 	position:absolute;
-	/*left:5px;*/
-	height:16px;
+	left:0;
 }
 
-.controls
-, .controls *
+button
 {
-	font-family:'Symbola' !important;
+	border-radius:0;
+	width:50px;
+	height:25px;
+	color:white;
+	background:black;
+	border:0;
 }

@@ -1,9 +1,0 @@
-a:4:{s:5:"child";a:1:{s:43:"http://www.w3.org/1999/02/22-rdf-syntax-ns#";a:1:{s:3:"RDF";a:1:{i:0;a:6:{s:4:"data";s:3:"
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:24:"http://purl.org/rss/1.0/";a:1:{s:7:"channel";a:1:{i:0;a:6:{s:4:"data";s:23:"
-    
-    
-    
-    
-  ";s:7:"attribs";a:1:{s:43:"http://www.w3.org/1999/02/22-rdf-syntax-ns#";a:1:{s:5:"about";s:18:"http://pinboard.in";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:24:"http://purl.org/rss/1.0/";a:4:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:18:"Pinboard (Private)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:28:"http://pinboard.in/u:hguiney";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:25:"Private items for hguiney";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:5:"items";a:1:{i:0;a:6:{s:4:"data";s:12:"
-      
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:43:"http://www.w3.org/1999/02/22-rdf-syntax-ns#";a:1:{s:3:"Seq";a:1:{i:0;a:5:{s:4:"data";s:6:"      ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}}}}}}}}}}s:4:"type";i:64;s:7:"headers";a:8:{s:6:"server";s:22:"Apache/2.2.14 (Ubuntu)";s:12:"content-type";s:15:"application/xml";s:14:"content-length";s:3:"691";s:4:"date";s:29:"Sun, 28 Aug 2011 02:16:40 GMT";s:9:"x-varnish";s:21:"1196583348 1196583233";s:3:"age";s:2:"39";s:3:"via";s:11:"1.1 varnish";s:10:"connection";s:10:"keep-alive";}s:5:"build";s:14:"20110825105900";}

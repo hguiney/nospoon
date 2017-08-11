@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ul xmlns="http://www.w3.org/1999/xhtml">
-<li><a href="http://vimeo.com/dendo/likes/rss" type="application/rss+xml" rel="feed">Dennis's Vimeo Likes</a></li>
-<li><a href="http://gdata.youtube.com/feeds/api/users/denhurley/favorites?orderby=updated" type="application/atom+xml" rel="feed">Dennis's YouTube Favorites</a></li>
-<li><a href="http://www.instapaper.com/folder/1254293/rss/1067907/8X3Zh6Ge8lkKiHway8rcBkAFas" type="application/rss+xml" rel="feed">Hugh's Instapaper Videos</a></li>
-<li><a href="http://feeds.pinboard.in/rss/secret%3A2aed39a2aa323b761b18/u%3Ahguiney/private/" type="application/rdf+xml" rel="feed">Hugh's Pinboard (Private)</a></li>
-<li><a href="http://vimeo.com/hughguiney/likes/rss" type="application/rss+xml" rel="feed">Hugh's Vimeo Likes</a></li>
-</ul>

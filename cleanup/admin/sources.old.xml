@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feeds>
-	<source title="Dennis's Vimeo Likes">http://vimeo.com/dendo/likes/rss</source>
-	<source title="Dennis's YouTube Favorites">http://gdata.youtube.com/feeds/api/users/denhurley/favorites?orderby=updated</source>
-	<source title="Hugh's Instapaper Videos">http://www.instapaper.com/folder/1254293/rss/1067907/8X3Zh6Ge8lkKiHway8rcBkAFas</source>
-	<source title="Hugh's Pinboard (Private)">http://feeds.pinboard.in/rss/secret%3A2aed39a2aa323b761b18/u%3Ahguiney/private/</source>
-	<source title="Hugh's Vimeo Likes">http://vimeo.com/hughguiney/likes/rss</source>
-</feeds>

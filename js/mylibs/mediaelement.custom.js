@@ -57,7 +57,6 @@ MediaElement('player-1', {success: function(media) {
 	var currentProgressPc = progress.find('output').eq(0);
 	var currentBufferedPc;
 	//var maxProgress = progress.find('.max').eq(0);
-	var bufferingComplete;
 	
 	// Time
 	var currentTime;
@@ -93,17 +92,12 @@ MediaElement('player-1', {success: function(media) {
 	}
 		
 	function updateBufferedProgress() {
-		if(!bufferingComplete) {
-			if(typeof currentBufferedPc == 'undefined') {
-				currentBufferedPc = getCurrentBufferedPc();
-			} else if(currentBufferedPc < 100) {
-				currentBufferedPc = getCurrentBufferedPc();
-				progress.attr('value', currentBufferedPc);
-				currentProgressPc.text(currentBufferedPc);
-			} else {
-				progress.attr('title', 'Buffering Complete');
-				bufferingComplete = true;
-			}
+		if(currentBufferedPc < 100) {
+			currentBufferedPc = getCurrentBufferedPc();
+			progress.val(currentBufferedPc);
+			currentProgressPc.text(currentBufferedPc);
+		} else {
+			progress.attr('title', 'Buffering Complete');
 		}
 	}
 	
@@ -137,7 +131,7 @@ MediaElement('player-1', {success: function(media) {
 	
 	// Detect seek bar capability
 	if(Modernizr.inputtypes.range && Modernizr.progressbar) {
-		rangeSeek = $('<input class="seek" type="range" value="0" step="any" />');		
+		rangeSeek = $('<input class="seek" title="Seek" type="range" value="0" step="any" />');		
 		seek.replaceWith(rangeSeek);
 		seek = controls.find('input.seek').eq(0);
 		progress = controls.find('progress.buffered').eq(0);
@@ -145,7 +139,6 @@ MediaElement('player-1', {success: function(media) {
 		seekbarCapable = true;
 	} else {
 		seekbarCapable = false;
-		$('html').addClass('no-seekbar');
 	}
 	
 	video.on('loadedmetadata', function mediaLoadedMetadata() {
@@ -157,9 +150,10 @@ MediaElement('player-1', {success: function(media) {
 		if(seekbarCapable) {
 			seek.attr('max', duration);
 			seek.on('change', function seekChange() {
-				newTime = seek.attr('value');
+				newTime = seek.val();
 				media.currentTime = newTime;
 			});
+			playbackProgress.attr('max', duration);
 			//playbackProgress.attr('title', durationTimeCode);
 			//playbackProgress.attr('data-duration-tc', durationTimeCode);
 			durationTime.text(durationTimeCode);
@@ -167,14 +161,11 @@ MediaElement('player-1', {success: function(media) {
 		} else {
 			valAttr = 'data-value';
 		}
-		playbackProgress.attr('max', duration);
 		
 		//console.log(getTimeCode());
 		
-		//currentBufferedPc = getCurrentBufferedPc();
-		video.on('progress', function mediaProgress() {
-			updateBufferedProgress();
-		});
+		currentBufferedPc = getCurrentBufferedPc();
+		updateBufferedProgress();	
 	
 		video.on('timeupdate', function mediaTimeUpdate() {
 			//console.log('mediaTimeUpdate()');

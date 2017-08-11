@@ -1,7 +1,0 @@
-@import url("../../stylesheets/reset.css");
-@import url("../../stylesheets/demo.css");
-@import url("../../stylesheets/less/grid.less");
-header#top { margin-bottom:1em; }
-@media screen and (max-width: 720px) {
-  #maincolumn, #sidebar { margin-bottom:1em; }
-}

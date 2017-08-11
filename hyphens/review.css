@@ -1,0 +1,91 @@
+.review
+{
+	padding-top:1.5em;
+	border:0;
+}
+
+.review > header > hgroup > *:first-child
+{
+	font-size:6rem;
+}
+
+.review > header > hgroup > * + *
+{
+	font-family: 'FF Tisa Web Pro';
+	font-weight: normal;
+}
+
+.review > header > hgroup > * + * > span
+{
+	font-style:italic;
+}
+
+.review > header
+{
+	text-align:center;
+}
+
+.review > header > figure
+{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.review > aside
+{
+	width:31rem;
+	box-sizing:border-box;
+	padding:.25rem 0;
+	padding-left:3rem;
+	float:right;
+	border-left:1px solid black;
+}
+
+.review > aside > dl > dt
+.review > aside > dl > dd {
+	height:18px;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.review > aside > dl > dt
+{
+	clear: left;
+	float: left;
+	width: 6.8rem;
+	margin: 0;
+}
+
+.review > aside > dl > dd
+{
+	margin-left:8rem;
+}
+
+.review > aside > dl > dt.content-rating ~ dt
+{
+	width: 12.2rem;
+}
+
+body > .content
+{
+	width:93.9rem;
+}
+
+.entry-content
+{
+	width:33.4em;
+	font-size:1.8rem;
+	padding-right:2.5rem;
+}
+
+.entry-content > p:first-child:first-line
+{
+	font-size:5rem;
+}
+
+figcaption
+{
+	width:100%;
+	max-width:90%;
+	font-size:1.6rem;
+}
