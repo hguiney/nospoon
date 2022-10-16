@@ -1,0 +1,104 @@
+/*
+	Font: Accord Alternate
+	Designer: 
+	Licensed
+		by: FontSpring <>
+		to: Hugh Guiney <hugh.guiney@nospoon.tv>
+		on: November 12th, 2011
+		for: Unlimited domains
+*/
+
+
+/*
+	Font: FF Tisa Web Pro
+	Designer: Mitja Miklavčič
+	Licensed
+		by: FSI FontShop International <info@fontfont.com>
+		to: Hugh Guiney <hugh.guiney@nospoon.tv>
+		on: November 12th, 2011
+		for: 500,000 page views/month
+*/
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Regular */
+	font-weight: normal;
+	font-style: normal;
+	src:
+		url('ff-tisa-web-pro/reg.eot?') format('eot'),
+		url('ff-tisa-web-pro/reg.woff') format('woff'),
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Small Caps Regular */
+	font-weight: normal;
+	font-style: normal;
+	font-variant: small-caps;
+	src:
+		url('ff-tisa-web-pro/sc-reg.eot?') format('eot'),
+		url('ff-tisa-web-pro/sc-reg.woff') format('woff'),
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Italic */
+	font-weight: normal;
+	font-style: italic;
+	src:
+		url('ff-tisa-web-pro/italic.eot?') format('eot'),
+		url('ff-tisa-web-pro/italic.woff') format('woff'),
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Small Caps Italic */
+	font-weight: normal;
+	font-style: italic;
+	font-variant: small-caps;
+	src:
+		url('ff-tisa-web-pro/sc-italic.eot?') format('eot'),
+		url('ff-tisa-web-pro/sc-italic.woff') format('woff'),
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Bold */
+	font-weight: bold;
+	font-style: normal;
+	src:
+		url('ff-tisa-web-pro/bold.eot?') format('eot'),
+		url('ff-tisa-web-pro/bold.woff') format('woff'),
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Small Caps Bold */
+	font-weight: bold;
+	font-style: normal;
+	font-variant: small-caps;
+	src:
+		url('ff-tisa-web-pro/sc-bold.eot?') format('eot'),
+		url('ff-tisa-web-pro/sc-bold.woff') format('woff'),
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Bold Italic */
+	font-weight: bold;
+	font-style: italic;
+	src:
+		url('ff-tisa-web-pro/bold-italic.eot?') format('eot'),
+		url('ff-tisa-web-pro/bold-italic.woff') format('woff'),
+	;
+}
+
+@font-face {
+	font-family: 'FF Tisa Web Pro'; /* Small Caps Bold Italic */
+	font-weight: bold;
+	font-style: italic;
+	font-variant: small-caps;
+	src:
+		url('ff-tisa-web-pro/sc-bold-italic.eot?') format('eot'),
+		url('ff-tisa-web-pro/sc-bold-italic.woff') format('woff'),
+	;
+}

@@ -1,0 +1,42 @@
+/* @license
+ * MyFonts Webfont Build ID 1275046, 2011-09-25T15:34:07-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Museo 700 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo/700/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
+ * 
+ * Webfont: Museo 300 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo/300/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
+ * 
+ * Webfont: Museo 500 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo/500/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
+ * 
+ * Webfont: Museo Sans 500 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-sans/500/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: Museo Sans 500 Italic by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-sans/500-italic/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=1275046
+ * Licensed pageviews: unlimited
+ * 
+ * © 2011 Bitstream Inc
+*/
+
+
+ @font-face {font-family: 'Museo-700';src: url('webfonts/1374A6_0.eot');src: url('webfonts/1374A6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/1374A6_0.woff') format('woff'),url('webfonts/1374A6_0.ttf') format('truetype'),url('webfonts/1374A6_0.svg#wf') format('svg');}
+ @font-face {font-family: 'Museo-300';src: url('webfonts/1374A6_1.eot');src: url('webfonts/1374A6_1.eot?#iefix') format('embedded-opentype'),url('webfonts/1374A6_1.woff') format('woff'),url('webfonts/1374A6_1.ttf') format('truetype'),url('webfonts/1374A6_1.svg#wf') format('svg');}
+ @font-face {font-family: 'Museo-500';src: url('webfonts/1374A6_2.eot');src: url('webfonts/1374A6_2.eot?#iefix') format('embedded-opentype'),url('webfonts/1374A6_2.woff') format('woff'),url('webfonts/1374A6_2.ttf') format('truetype'),url('webfonts/1374A6_2.svg#wf') format('svg');}
+ @font-face {font-family: 'MuseoSans-500';src: url('webfonts/1374A6_3.eot');src: url('webfonts/1374A6_3.eot?#iefix') format('embedded-opentype'),url('webfonts/1374A6_3.woff') format('woff'),url('webfonts/1374A6_3.ttf') format('truetype'),url('webfonts/1374A6_3.svg#wf') format('svg');}
+ @font-face {font-family: 'MuseoSans-500Italic';src: url('webfonts/1374A6_4.eot');src: url('webfonts/1374A6_4.eot?#iefix') format('embedded-opentype'),url('webfonts/1374A6_4.woff') format('woff'),url('webfonts/1374A6_4.ttf') format('truetype'),url('webfonts/1374A6_4.svg#wf') format('svg');}
