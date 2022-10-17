@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="no-js" lang="<%= @locale %>" xml:lang="<%= @locale %>" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-translate="BRAND_NAME"><%= @copy.BRAND_NAME[@language] %></title>
+
+    <meta property="og:title" content="No Spoon Productions" />
+    <meta name="twitter:title" content="No Spoon Productions" />
+
+    <meta name="description" content="Escape the Matrix. | A cinematic side-hustle by Hugh Guiney." />
+    <meta property="og:description" content="Escape the Matrix. | A cinematic side-hustle by Hugh Guiney." />
+    <meta name="twitter:description" content="Escape the Matrix. | A cinematic side-hustle by Hugh Guiney." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="<%= @locale.sub( '-', '_' ) %>" />
+    <!-- <meta property="og:locale:alternate" content="ja_JP" /> -->
+    <meta property="og:image" content="https://nospoon.tv/img/no-spoon-productions-og-image.jpg" />
+    <meta property="og:image:width" content="4666" />
+    <meta property="og:image:height" content=" 3111" />
+    <meta property="og:image:alt" content="No Spoon Productions logo superimposed over a black-and-white aerial shot of Boston, Massachusetts from the waterfront" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@NoSpoonProduct" />
+    <meta name="twitter:creator" content="@LordPancreas" />
+    <meta name="twitter:image" content="https://nospoon.tv/img/no-spoon-productions-twitter-image.jpg" />
+    <meta name="twitter:image:alt" content="No Spoon Productions logo superimposed over a black-and-white aerial shot of Boston, Massachusetts from the waterfront" />
+
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 64x64 128x128 256x256" href="/favicon.ico" />
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="stylesheet" href="/style/checkout.css" />
+    <link rel="preload" as="style" href="/style/fonts/noto-sans-latin-ext.css" onload="this.rel = 'stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="/style/fonts/noto-sans-latin-ext.css" />
+      <link rel="stylesheet" href="/style/fonts/noto-sans-japanese.css" />
+    </noscript>
+  </head>
+  <body>
+    <div class="shading<%= ' shading--splash' if defined? splash %>">
+      <div id="controls" class="controls">
+        <div id="controls-left" class="controls__left"></div>
+        <div id="controls-right" class="controls__right">
+          <a class="inline-block inline-block--baseline" href="/">
+            <picture>
+              <source type="image/svg+xml" srcset="/img/home-solid.svg" />
+              <source type="image/webp" srcset="/img/home-solid.webp 1x, /img/home-solid@2x.webp 2x, /img/home-solid@3x.webp 3x" />
+              <img src="/img/home-solid.png" srcset="/img/home-solid.png 1x, /img/home-solid@2x.png 2x, /img/home-solid@3x.png 3x" width="20" alt="🏠" />
+            </picture>
+          </a>
+        </div><!-- /#controls-right -->
+      </div><!-- /#controls -->

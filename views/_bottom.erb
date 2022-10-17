@@ -1,0 +1,18 @@
+      <footer id="footer" class="footer">
+        <p class="social-media"><a href="https://www.imdb.com/search/title/?companies=co0607776"><img src="/img/imdb-logo--white.svg" height="25" alt="IMDb" /></a> <a href="https://instagram.com/nospoonproductions"><img src="/img/instagram-logo--white.svg" height="25" alt="Instagram" /></a> <a href="https://facebook.com/NoSpoonProductions"><img src="/img/facebook-logo--white.svg" height="25" alt="Facebook" /></a> <a href="https://twitter.com/NoSpoonProduct"><img src="/img/twitter-logo--white.svg" height="21" alt="Twitter" /></a></p>
+        <p>© <span id="est-year">2008</span>–<span id="current-year"><%= @currentYear %></span> No Spoon Productions</p>
+      </footer>
+    </div><!--/#shading-->
+    <script><%= @productData %></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="/script/polyfills/object.assign.js"></script>
+    <%# if defined?(jquery) %>
+    <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="/node_modules/jquery.repeater/jquery.repeater.min.js"></script>
+    <%# end %>
+    <script src="/script/main.js"></script>
+    <script src="/script/checkout.js"></script>
+    <% if defined?(scripts) %><script src="/script/<%= scripts %>.js"></script><% end %>
+  </body>
+</html>
