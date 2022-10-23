@@ -1,3 +1,65 @@
+@font-face {
+  font-family: 'Accord Alternate';
+  font-weight: bold;
+  font-style: normal;
+  src: url('fonts/NoSpoon.eot');
+  src: url('fonts/NoSpoon.eot?#iefix') format('embedded-opentype'),
+    url('fonts/NoSpoon.woff2') format('woff2'),
+    url('fonts/NoSpoon.woff') format('woff'),
+    url('fonts/NoSpoon.otf') format('opentype'),
+    url('fonts/NoSpoon.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Accord Alternate';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/Productions.eot');
+  src: url('fonts/Productions.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Productions.woff2') format('woff2'),
+    url('fonts/Productions.woff') format('woff'),
+    url('fonts/Productions.otf') format('opentype'),
+    url('fonts/Productions.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'League Gothic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/LeagueGothic-Regular.eot');
+  src: url('fonts/LeagueGothic-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/LeagueGothic-Regular.woff2') format('woff2'),
+    url('fonts/LeagueGothic-Regular.woff') format('woff'),
+    url('fonts/LeagueGothic-Regular.otf') format('opentype'),
+    url('fonts/LeagueGothic-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'League Gothic';
+  font-weight: normal;
+  font-style: italic;
+  src: url('fonts/LeagueGothic-Italic.eot');
+  src: url('fonts/LeagueGothic-Italic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/LeagueGothic-Italic.woff2') format('woff2'),
+    url('fonts/LeagueGothic-Italic.woff') format('woff'),
+    url('fonts/LeagueGothic-Italic.otf') format('opentype'),
+    url('fonts/LeagueGothic-Italic.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Noto Emoji';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/NotoEmoji-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Emoji';
+  font-weight: bold;
+  font-style: normal;
+  src: url('fonts/NotoEmoji-Bold.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -27,7 +89,7 @@ body {
   color: whitesmoke;
   color: rgb(235, 235, 235);
   text-align: left;
-  font-family: skolar-sans-latin-extended-1, skolar-sans-latin-extended-2, 'Noto Sans', 'Source Sans Pro', 'Roboto', 'Proxima Nova', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: skolar-sans-latin-extended-1, skolar-sans-latin-extended-2, 'Proxima Nova', 'Noto Sans', 'Source Sans Pro', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -140,6 +202,19 @@ main > .content.content--collection {
   background-color: hsl(200, 50%, 50%);
 }
 
+.view.view--about {
+  max-width: 38.2rem;
+}
+
+@media only screen and (min-width: 38.2em) {
+  @supports ( hyphens: auto ) {
+    .view.view--about {
+      text-align: justify;
+      hyphens: auto;
+    }
+  }
+}
+
 picture {
   line-height: 0;
 }
@@ -227,7 +302,18 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, dl, address {
   margin-right: auto;
 }
 
-/* h1, h2, h3, h4, h5, h6 {} */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 0.8;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
 
 .ww {
   display: inline-block;
@@ -265,8 +351,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, dl, address {
   .shading {
     background-image:
       linear-gradient(
-        to right, rgba(16, 16, 16, 0.75),
-        rgba(16, 16, 16, 0.75)
+        to right, rgba(16, 16, 16, 0.8),
+        rgba(16, 16, 16, 0.8)
       ),
       url('/img/osman-rana-332236-unsplash--hi-contrast-bw@0,25x.jpg')
     ;
@@ -282,8 +368,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, dl, address {
   .shading {
     background-image:
       linear-gradient(
-        to right, rgba(16, 16, 16, 0.75),
-        rgba(16, 16, 16, 0.75)
+        to right, rgba(16, 16, 16, 0.8),
+        rgba(16, 16, 16, 0.8)
       ),
       url('/img/osman-rana-332236-unsplash--hi-contrast-bw@0,5x.jpg')
     ;
@@ -299,8 +385,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, dl, address {
   .shading {
     background-image:
       linear-gradient(
-        to right, rgba(16, 16, 16, 0.75),
-        rgba(16, 16, 16, 0.75)
+        to right, rgba(16, 16, 16, 0.8),
+        rgba(16, 16, 16, 0.8)
       ),
       url('/img/osman-rana-332236-unsplash--hi-contrast-bw@0,75x.jpg')
     ;
@@ -316,8 +402,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, dl, address {
   .shading {
     background-image:
       linear-gradient(
-        to right, rgba(16, 16, 16, 0.75),
-        rgba(16, 16, 16, 0.75)
+        to right, rgba(16, 16, 16, 0.8),
+        rgba(16, 16, 16, 0.8)
       ),
       url('/img/osman-rana-332236-unsplash--hi-contrast-bw.jpg')
     ;
@@ -373,7 +459,7 @@ summary {
   margin: 0 0.25rem;
   white-space: nowrap;
   display: inline-block;
-  font-family: league-gothic-1, league-gothic-2, sans-serif;
+  font-family: 'League Gothic', sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   font-size: 2.5rem;
@@ -516,6 +602,7 @@ button, .button {
   color: rgb(16, 16, 16);
   border: 1px solid transparent;
   font-size: 1.5rem;
+  font-family: 'Noto Emoji', sans-serif;
   padding: 0.375rem .75rem;
   border-bottom: 0.25rem solid hsla(0, 0%, 40%, 0.5);
   border-right: 0.125rem solid hsla(0, 0%, 50%, 0.5);
@@ -584,8 +671,13 @@ button[disabled], .button[disabled] {
   margin-top: 1rem;
 }
 
+.brand-name {
+  white-space: nowrap;
+}
+
 .branding {
   font-family: 'Accord Alternate', 'AccordAlternate', 'Ubuntu', 'Noto Sans', 'Source Sans Pro', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  text-transform: none;
   text-align: center;
   white-space: nowrap;
   background-repeat: no-repeat;
@@ -644,30 +736,6 @@ button[disabled], .button[disabled] {
   width: 82.32421875%;
 }
 
-@font-face {
-  font-family: 'Accord Alternate';
-  font-weight: bold;
-  font-style: normal;
-  src: url('fonts/NoSpoon.eot');
-  src: url('fonts/NoSpoon.eot?#iefix') format('embedded-opentype'),
-    url('fonts/NoSpoon.woff2') format('woff2'),
-    url('fonts/NoSpoon.woff') format('woff'),
-    url('fonts/NoSpoon.otf') format('opentype'),
-    url('fonts/NoSpoon.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Accord Alternate';
-  font-weight: normal;
-  font-style: normal;
-  src: url('fonts/Productions.eot');
-  src: url('fonts/Productions.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Productions.woff2') format('woff2'),
-    url('fonts/Productions.woff') format('woff'),
-    url('fonts/Productions.otf') format('opentype'),
-    url('fonts/Productions.ttf') format('truetype');
-}
-
 .language {
   font-size: 1.5rem;
   z-index: 2;
@@ -710,7 +778,7 @@ button[disabled], .button[disabled] {
   top: 0;
   padding: 1rem 0.5rem;
   z-index: 1;
-  box-shadow: 0 1rem 0.4rem rgb(16 16 16);
+  /* box-shadow: 0 1rem 0.4rem rgb(16 16 16); */
 }
 
 @media only screen and (min-width: 44em) {

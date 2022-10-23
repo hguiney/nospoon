@@ -60,4 +60,12 @@ class NoSpoonProductions < Sinatra::Base
       :lang => @lang
     }
   end
+
+  get "/about/" do
+    erb :about, :locals => {
+      :language => @language,
+      :locale => @locale,
+      :lang => @lang
+    }
+  end
 end
