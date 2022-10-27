@@ -1,11 +1,16 @@
 <%= erb :_top, :locals => { :splash => true, :page => 'about' } %>
 <main class="view view--about">
   <div class="content">
-    <audio id="audio-monodzukuri" src="audio/monodzukuri.wav"></audio>
-    <h1><i lang="ja">Monodzukuri</i>. <button aria-controls="audio-monodzukuri">🗣</button></h1>
+    <audio id="audio-monodzukuri" src="/audio/monodzukuri.wav"></audio>
+    <h1 class="heading-with-button">
+      <i lang="ja">Monodzukuri</i>.
+      <button class="speak" aria-controls="audio-monodzukuri">
+        <img src="/img/noto-emoji-speaking-head-in-silhouette--white.svg" width="22" alt="🗣" />
+      </button>
+    </h1>
     <p>It means “craftsmanship”, and it’s come to embody Japan’s manufacturing ethos. It’s about taking pride in one’s work. Applying engineering know-how and design sense in equal measure. Eschewing cheap trinkets for products that are in harmony with nature; of value to society. And above all else, it’s about chasing perfection. <span class="brand-name">No Spoon Productions</span> adopts <i lang="ja">monodzukuri</i> as a guiding principle as we endeavor to bring you the best in narrative cinema.</p>
     <%# <h2>Team</h2>
     <h3>Hugh Guiney, Founder &amp; CEO</h3> %>
   </div><!-- /.content -->
 </main>
-<%= erb :_bottom %>
+<%= erb :_bottom, :locals => { :page => 'about' } %>

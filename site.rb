@@ -68,4 +68,12 @@ class NoSpoonProductions < Sinatra::Base
       :lang => @lang
     }
   end
+
+  get "/films/" do
+    erb :films, :locals => {
+      :language => @language,
+      :locale => @locale,
+      :lang => @lang
+    }
+  end
 end

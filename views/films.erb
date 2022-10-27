@@ -1,0 +1,40 @@
+<%= erb :_top, :locals => { :page => 'films' } %>
+<main class="view view--films">
+  <article class="content">
+    <h1 style="text-align: center">Films</h1>
+    <%# <div class="columns"> %>
+    <article id="in-development">
+      <h2>Announced</h2>
+      <article id="entanglement">
+        <h3 class="film"><cite>Entanglement</cite> <span>(20XX)</span></h3>
+        <p class="genre">Feature • Romance, Thriller</p>
+        <p>Mark, a quantum engineering grad student, becomes caught between two lovers on opposite sides of a mounting revolution.</p>
+      </article>
+      <article id="payback">
+        <h3 class="film"><cite>Payback</cite> <span>(2023)</span></h3>
+        <p class="genre">Short • Comedy</p>
+        <p>A guy abuses his birthday wishes for personal gain.</p>
+      </article>
+    </article><!-- /#in-development -->
+    <article id="released" style="margin: 3.5rem 0">
+      <h2>Released</h2>
+      <article id="the-cost-of-doing-business">
+        <h3 class="film"><cite>The Cost of Doing Business</cite> <span>(2014)</span></h3>
+        <p class="genre">Short • Thriller</p>
+        <p>A young professional with a dark past agrees to participate in an art project for some extra cash, but ends up with more than she bargained for.</p>
+      </article>
+      <article id="wicked-sketchy">
+        <h3 class="film"><cite>Wicked Sketchy</cite> <span>(2011)</span></h3>
+        <p class="genre">Series • Comedy</p>
+        <p>Assorted sketches from Boston writers and actors.</p>
+      </article>
+      <article id="wicked-sketchy">
+        <h3 class="film"><cite>Twenty-One</cite> <span>(2007)</span></h3>
+        <p class="genre">Short • Drama</p>
+        <p>An individual deals with a recent breakup on Christmas Eve.</p>
+      </article>
+    </article><!-- /#released -->
+    <%# </div> %>
+  </article><!-- /.content -->
+</main>
+<%= erb :_bottom, :locals => { :page => 'films' } %>
