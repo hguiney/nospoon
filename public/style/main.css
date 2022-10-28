@@ -2,62 +2,108 @@
   font-family: 'Accord Alternate';
   font-weight: bold;
   font-style: normal;
-  src: url('fonts/NoSpoon.eot');
-  src: url('fonts/NoSpoon.eot?#iefix') format('embedded-opentype'),
-    url('fonts/NoSpoon.woff2') format('woff2'),
-    url('fonts/NoSpoon.woff') format('woff'),
-    url('fonts/NoSpoon.otf') format('opentype'),
-    url('fonts/NoSpoon.ttf') format('truetype');
+  font-display: block;
+  src: url('fonts/accord-alternate/NoSpoon.eot');
+  src: url('fonts/accord-alternate/NoSpoon.eot?#iefix') format('embedded-opentype'),
+    url('fonts/accord-alternate/NoSpoon.woff2') format('woff2'),
+    url('fonts/accord-alternate/NoSpoon.woff') format('woff'),
+    url('fonts/accord-alternate/NoSpoon.otf') format('opentype'),
+    url('fonts/accord-alternate/NoSpoon.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Accord Alternate';
   font-weight: normal;
   font-style: normal;
-  src: url('fonts/Productions.eot');
-  src: url('fonts/Productions.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Productions.woff2') format('woff2'),
-    url('fonts/Productions.woff') format('woff'),
-    url('fonts/Productions.otf') format('opentype'),
-    url('fonts/Productions.ttf') format('truetype');
+  font-display: block;
+  src: url('fonts/accord-alternate/Productions.eot');
+  src: url('fonts/accord-alternate/Productions.eot?#iefix') format('embedded-opentype'),
+    url('fonts/accord-alternate/Productions.woff2') format('woff2'),
+    url('fonts/accord-alternate/Productions.woff') format('woff'),
+    url('fonts/accord-alternate/Productions.otf') format('opentype'),
+    url('fonts/accord-alternate/Productions.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'League Gothic';
   font-weight: normal;
   font-style: normal;
-  src: url('fonts/LeagueGothic-Regular.eot');
-  src: url('fonts/LeagueGothic-Regular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/LeagueGothic-Regular.woff2') format('woff2'),
-    url('fonts/LeagueGothic-Regular.woff') format('woff'),
-    url('fonts/LeagueGothic-Regular.otf') format('opentype'),
-    url('fonts/LeagueGothic-Regular.ttf') format('truetype'),
+  font-display: block;
+  src: url('fonts/league-gothic/LeagueGothic-Regular.eot');
+  src: url('fonts/league-gothic/LeagueGothic-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/league-gothic/LeagueGothic-Regular.woff2') format('woff2'),
+    url('fonts/league-gothic/LeagueGothic-Regular.woff') format('woff'),
+    url('fonts/league-gothic/LeagueGothic-Regular.otf') format('opentype'),
+    url('fonts/league-gothic/LeagueGothic-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'League Gothic';
   font-weight: normal;
   font-style: italic;
-  src: url('fonts/LeagueGothic-Italic.eot');
-  src: url('fonts/LeagueGothic-Italic.eot?#iefix') format('embedded-opentype'),
-    url('fonts/LeagueGothic-Italic.woff2') format('woff2'),
-    url('fonts/LeagueGothic-Italic.woff') format('woff'),
-    url('fonts/LeagueGothic-Italic.otf') format('opentype'),
-    url('fonts/LeagueGothic-Italic.ttf') format('truetype'),
+  font-display: block;
+  src: url('fonts/league-gothic/LeagueGothic-Italic.eot');
+  src: url('fonts/league-gothic/LeagueGothic-Italic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/league-gothic/LeagueGothic-Italic.woff2') format('woff2'),
+    url('fonts/league-gothic/LeagueGothic-Italic.woff') format('woff'),
+    url('fonts/league-gothic/LeagueGothic-Italic.otf') format('opentype'),
+    url('fonts/league-gothic/LeagueGothic-Italic.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Noto Emoji';
+  font-family: 'Skolar Sans';
   font-weight: normal;
   font-style: normal;
-  src: url('fonts/NotoEmoji-Regular.ttf') format('truetype');
+  font-display: block;
+  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Rg.eot'); */
+  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Rg.eot?#iefix') format('embedded-opentype'), */
+  src:
+    url('fonts/skolar-sans/web/SkolarSansPEWeb-Rg.woff2') format('woff2'),
+    url('fonts/skolar-sans/web/SkolarSansPEWeb-Rg.woff') format('woff'),
+    url('fonts/skolar-sans/otf/SkolarSansPE-Rg.otf') format('opentype'),
+    url('fonts/skolar-sans/ttf/SkolarSansPE-Rg.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Noto Emoji';
+  font-family: 'Skolar Sans';
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-It.eot'); */
+  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-It.eot?#iefix') format('embedded-opentype'), */
+  src:
+    url('fonts/skolar-sans/web/SkolarSansPEWeb-It.woff2') format('woff2'),
+    url('fonts/skolar-sans/web/SkolarSansPEWeb-It.woff') format('woff'),
+    url('fonts/skolar-sans/otf/SkolarSansPE-It.otf') format('opentype'),
+    url('fonts/skolar-sans/ttf/SkolarSansPE-It.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Skolar Sans';
   font-weight: bold;
   font-style: normal;
-  src: url('fonts/NotoEmoji-Bold.ttf') format('truetype');
+  font-display: block;
+  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot'); */
+  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot?#iefix') format('embedded-opentype'), */
+  src:
+    url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.woff2') format('woff2'),
+    url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.woff') format('woff'),
+    url('fonts/skolar-sans/otf/SkolarSansPE-Bd.otf') format('opentype'),
+    url('fonts/skolar-sans/ttf/SkolarSansPE-Bd.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Skolar Sans';
+  font-weight: bold;
+  font-style: italic;
+  font-display: block;
+  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot'); */
+  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot?#iefix') format('embedded-opentype'), */
+  src:
+    url('fonts/skolar-sans/web/SkolarSansPEWeb-BdIt.woff2') format('woff2'),
+    url('fonts/skolar-sans/web/SkolarSansPEWeb-BdIt.woff') format('woff'),
+    url('fonts/skolar-sans/otf/SkolarSansPE-BdIt.otf') format('opentype'),
+    url('fonts/skolar-sans/ttf/SkolarSansPE-BdIt.ttf') format('truetype');
 }
 
 * {
@@ -90,6 +136,7 @@ body {
   color: rgb(235, 235, 235);
   text-align: left;
   font-family: skolar-sans-latin-extended-1, skolar-sans-latin-extended-2, 'Proxima Nova', 'Noto Sans', 'Source Sans Pro', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Skolar Sans', 'Proxima Nova', 'Noto Sans', 'Source Sans Pro', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -203,10 +250,11 @@ main > .content.content--collection {
 }
 
 .view.view--about {
-  max-width: 38.2rem;
+  /* max-width: 38.2rem; */
+  max-width: 34.8rem;
 }
 
-@media only screen and (min-width: 38.2em) {
+@media only screen and (min-width: 34.8em) {
   @supports ( hyphens: auto ) {
     .view.view--about {
       text-align: justify;
@@ -374,8 +422,8 @@ h5, h6 {
 .shading {
   background-image:
     linear-gradient(
-      to right, rgba(16, 16, 16, 0.8),
-      rgba(16, 16, 16, 0.8)
+      to right, rgba(16, 16, 16, 0.9),
+      rgba(16, 16, 16, 0.9)
     ),
     url('/img/osman-rana-332236-unsplash--hi-contrast-bw@0,1875x.jpg')
   ;
@@ -394,6 +442,16 @@ h5, h6 {
   justify-content: center;
 }
 
+.shading.shading--lighter {
+  background-image:
+    linear-gradient(
+      to right, rgba(16, 16, 16, 0.8),
+      rgba(16, 16, 16, 0.8)
+    ),
+    url('/img/osman-rana-332236-unsplash--hi-contrast-bw@0,1875x.jpg')
+  ;
+}
+
 @media
   only screen and (-webkit-min-device-pixel-ratio: 1.25),
   only screen and (min-resolution: 200dpi),
@@ -401,6 +459,23 @@ h5, h6 {
   only screen and (min-width: 1351px)
 {
   .shading {
+    background-image:
+      linear-gradient(
+        to right, rgba(16, 16, 16, 0.9),
+        rgba(16, 16, 16, 0.9)
+      ),
+      url('/img/osman-rana-332236-unsplash--hi-contrast-bw@0,25x.jpg')
+    ;
+  }
+}
+
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (min-resolution: 200dpi),
+  only screen and (min-resolution: 1.25dppx),
+  only screen and (min-width: 1351px)
+{
+  .shading.shading--lighter {
     background-image:
       linear-gradient(
         to right, rgba(16, 16, 16, 0.8),
@@ -420,6 +495,23 @@ h5, h6 {
   .shading {
     background-image:
       linear-gradient(
+        to right, rgba(16, 16, 16, 0.9),
+        rgba(16, 16, 16, 0.9)
+      ),
+      url('/img/osman-rana-332236-unsplash--hi-contrast-bw@0,5x.jpg')
+    ;
+  }
+}
+
+@media
+  only screen and (min-width: 1351px) and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (min-width: 1351px) and (min-resolution: 200dpi),
+  only screen and (min-width: 1351px) and (min-resolution: 1.25dppx),
+  only screen and (min-width: 2702px)
+{
+  .shading.shading--lighter {
+    background-image:
+      linear-gradient(
         to right, rgba(16, 16, 16, 0.8),
         rgba(16, 16, 16, 0.8)
       ),
@@ -437,6 +529,23 @@ h5, h6 {
   .shading {
     background-image:
       linear-gradient(
+        to right, rgba(16, 16, 16, 0.9),
+        rgba(16, 16, 16, 0.9)
+      ),
+      url('/img/osman-rana-332236-unsplash--hi-contrast-bw@0,75x.jpg')
+    ;
+  }
+}
+
+@media
+  only screen and (min-width: 2702px) and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (min-width: 2702px) and (min-resolution: 200dpi),
+  only screen and (min-width: 2702px) and (min-resolution: 1.25dppx),
+  only screen and (min-width: 4052px)
+{
+  .shading.shading--lighter {
+    background-image:
+      linear-gradient(
         to right, rgba(16, 16, 16, 0.8),
         rgba(16, 16, 16, 0.8)
       ),
@@ -452,6 +561,23 @@ h5, h6 {
   only screen and (min-width: 5403px)
 {
   .shading {
+    background-image:
+      linear-gradient(
+        to right, rgba(16, 16, 16, 0.9),
+        rgba(16, 16, 16, 0.9)
+      ),
+      url('/img/osman-rana-332236-unsplash--hi-contrast-bw.jpg')
+    ;
+  }
+}
+
+@media
+  only screen and (min-width: 4052px) and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (min-width: 4052px) and (min-resolution: 200dpi),
+  only screen and (min-width: 4052px) and (min-resolution: 1.25dppx),
+  only screen and (min-width: 5403px)
+{
+  .shading.shading--lighter {
     background-image:
       linear-gradient(
         to right, rgba(16, 16, 16, 0.8),
@@ -773,7 +899,6 @@ button, .button {
   color: rgb(16, 16, 16);
   border: 1px solid transparent;
   font-size: 1.5rem;
-  font-family: 'Noto Emoji', sans-serif;
   padding: 0.375rem .75rem;
   border-bottom: 0.25rem solid hsla(0, 0%, 40%, 0.5);
   border-right: 0.125rem solid hsla(0, 0%, 50%, 0.5);

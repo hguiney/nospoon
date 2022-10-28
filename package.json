@@ -1,22 +1,22 @@
 {
-  "name": "nospoon-apparel",
+  "name": "nospoon-site",
   "license": "UNLICENSED",
   "private": true,
   "version": "0.0.0",
   "description": "No Spoon Productions Website",
-  "homepage": "https://apparel.nospoon.tv",
+  "homepage": "https://nospoon.productions",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NoSpoonProductions/nospoon-apparel.git"
+    "url": "git+https://github.com/HughxDev/nospoon-site.git"
   },
   "author": {
     "name": "Hugh Guiney",
-    "email": "nospoonapparel@hughguiney.com",
-    "url": "https://apparel.nospoon.tv"
+    "email": "hugh@nospoon.productions",
+    "url": "https://nospoon.productions"
   },
   "bugs": {
-    "url": "https://github.com/NoSpoonProductions/nospoon-apparel/issues",
-    "email": "nospoonapparel@hughguiney.com"
+    "url": "https://github.com/HughxDev/nospoon-site/issues",
+    "email": "bugs@nospoon.productions"
   },
   "scripts": {
     "svg2png": "inkscape -z -e $OUTFILE -w $WIDTH $INFILE",
