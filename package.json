@@ -5,6 +5,7 @@
   "version": "0.0.0",
   "description": "No Spoon Productions Website",
   "homepage": "https://nospoon.productions",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HughxDev/nospoon-site.git"
@@ -24,42 +25,52 @@
     "crunch": "find ./src/img/png/ -type f -name \"*.png\" -exec guetzli --verbose --quality 84 {} {}.jpg \\; && rename \"s/png.jpg/jpg/\" ./src/img/png/*.png.jpg",
     "progressive": "find ./src/img/png/ -type f -name \"*.jpg\" -exec jpegtran -outfile {}.prog -progressive {} \\; && rename \"s/jpg.prog/prog.jpg/\" ./src/img/png/*.prog",
     "static": "./static.sh",
-    "static-ja": "./static-ja.sh",
-    "build": "yarn static; yarn static-ja; gulp postprocess",
-    "upload": "yarn sync; yarn sync-ja",
+    "local": "./local.sh",
+    "build": "yarn local && yarn static && yarn subset && gulp postprocess ",
+    "upload": "yarn sync",
     "update": "yarn build && yarn upload",
-    "sync": "ssh nospoon@hughguiney.com \"rm -rf /srv/www/nospoon-apparel/public/dist/\"; scp -r dist/ nospoon@hughguiney.com:/srv/www/nospoon-apparel/public/dist/",
-    "sync-ja": "ssh nospoon@hughguiney.com \"rm -rf /srv/www/nospoon-apparel/public/ja/\"; scp -r ja/ nospoon@hughguiney.com:/srv/www/nospoon-apparel/public/ja/",
+    "sync": "ssh architect@hughguiney.com \"rm -rf /var/www/nospoon-site/public/dist/\"; scp -r dist/ architect@hughguiney.com:/var/www/nospoon-site/public/dist/",
     "yaml2json": "yaml2json data/ --pretty --save --recursive",
     "log": "subl /usr/local/var/log/httpd/error_log",
-    "dev": "rerun rackup"
+    "dev": "rerun rackup",
+    "subset": "./subset.sh"
   },
   "dependencies": {
     "apache-server-configs": "^3.0.0",
-    "autoprefixer": "^9.3.1",
-    "cssnano": "^4.1.7",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-postcss": "^8.0.0",
-    "gulp-replace": "^1.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.3",
     "gulp-rev": "^9.0.0",
     "gulp-rev-css-url": "^0.1.0",
     "gulp-rev-delete-original": "^0.2.3",
-    "gulp-rev-rewrite": "^1.1.4",
-    "gulp-uglify": "^3.0.1",
+    "gulp-rev-rewrite": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.6.1",
     "jquery.repeater": "^1.2.1",
-    "modernizr": "^3.6.0",
+    "modernizr": "^3.12.0",
     "pump": "^3.0.0",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "eslint": "^8.26.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-hughx": "^0.0.14",
-    "eslint-plugin-import": "^2.26.0"
-  }
+    "eslint-plugin-import": "^2.26.0",
+    "glyphhanger": "^5.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "postcss": "^8.4.18"
+  },
+  "browserslist": [
+    "last 1 version"
+  ]
 }

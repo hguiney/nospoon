@@ -3,6 +3,12 @@ module.exports = {
   "parserOptions": {
     "sourceType": "script",
   },
+  "overrides": [{
+    "files": ["./gulpfile.js"],
+    "parserOptions": {
+      "sourceType": "module",
+    },
+  }],
   "rules": {
     "strict": ["error", "function"],
   },

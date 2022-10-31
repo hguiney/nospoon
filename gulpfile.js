@@ -1,34 +1,39 @@
 /* eslint-disable strict */
 // @ts-nocheck
 
-const postcss = require( 'gulp-postcss' );
-const gulp = require( 'gulp' );
-const autoprefixer = require( 'autoprefixer' );
-const cssnano = require( 'cssnano' );
-const htmlmin = require( 'gulp-htmlmin' );
-const uglify = require( 'gulp-uglify' );
-const pump = require( 'pump' );
-const imagemin = require( 'gulp-imagemin' );
-const webp = require( 'gulp-webp' );
-const del = require( 'del' );
-const replace = require( 'gulp-replace' );
-const rev = require( 'gulp-rev' );
-const revRewrite = require( 'gulp-rev-rewrite' );
-const revDelete = require( 'gulp-rev-delete-original' );
-const revCssUrl = require( 'gulp-rev-css-url' );
+import postcss from 'gulp-postcss';
+import gulp from 'gulp';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import htmlmin from 'gulp-htmlmin';
+import uglify from 'gulp-uglify';
+import pump from 'pump';
+import imagemin from 'gulp-imagemin';
+import imageminOptipng from 'imagemin-optipng';
+import imageminSvgo from 'imagemin-svgo';
+// import imageminMozjpeg from 'imagemin-mozjpeg';
+import imageminGifsicle from 'imagemin-gifsicle';
+import webp from 'gulp-webp';
+import { deleteAsync } from 'del';
+import replace from 'gulp-replace';
+import rev from 'gulp-rev';
+import revRewrite from 'gulp-rev-rewrite';
+import revDelete from 'gulp-rev-delete-original';
+import revCssUrl from 'gulp-rev-css-url';
+import purgecss from '@fullhuman/postcss-purgecss';
+import fs from 'fs';
 
 function noop() {}
 
-gulp.task( 'del', () => del( ['./dist/', './ja'] ) );
+gulp.task( 'del', () => deleteAsync( ['./dist/', './ja'] ) );
 
 function processCSS( source = 'src', dest = 'dist', cb = noop ) {
   const plugins = [
-    autoprefixer( {
-      "browsers": [
-        'last 1 version',
-      ],
+    autoprefixer(),
+    purgecss( {
+      "content": [`./${source}/**/*.html`],
     } ),
-    cssnano(),
+    // cssnano(),
   ];
 
   const pipeline = [
@@ -45,8 +50,8 @@ gulp.task( 'cssmin', ( cb ) => {
 } );
 
 gulp.task( 'cssmin-postprocess', ( cb ) => {
-  processCSS( 'dist', 'dist' );
-  processCSS( 'ja', 'ja', cb );
+  processCSS( 'dist', 'dist', cb );
+  // processCSS( 'ja', 'ja', cb );
 } );
 
 function processFonts( source = 'public', dest = 'dist', cb = noop ) {
@@ -63,8 +68,8 @@ gulp.task( 'fonts', ( cb ) => {
 } );
 
 gulp.task( 'fonts-postprocess', ( cb ) => {
-  processFonts( 'dist', 'dist' );
-  processFonts( 'ja', 'ja', cb );
+  processFonts( 'dist', 'dist', cb );
+  // processFonts( 'ja', 'ja', cb );
 } );
 
 function processHTML( source = 'public', dest = 'dist', cb = noop ) {
@@ -83,8 +88,8 @@ gulp.task( 'htmlmin', ( cb ) => {
 } );
 
 gulp.task( 'htmlmin-postprocess', ( cb ) => {
-  processHTML( 'dist', 'dist' ),
-  processHTML( 'ja', 'ja', cb );
+  processHTML( 'dist', 'dist', cb );
+  // processHTML( 'ja', 'ja', cb );
 } );
 
 function processJS( source = 'public', dest = 'dist', cb = noop ) {
@@ -107,8 +112,8 @@ gulp.task( 'jsmin', ( cb ) => {
 } );
 
 gulp.task( 'jsmin-postprocess', ( cb ) => {
-  processJS( 'dist', 'dist' ),
-  processJS( 'ja', 'ja', cb );
+  processJS( 'dist', 'dist', cb );
+  // processJS( 'ja', 'ja', cb );
 } );
 
 function png2webp( source = 'public', dest = 'dist', cb = noop ) {
@@ -139,10 +144,11 @@ function processImages( source = 'public', dest = 'dist', cb = noop ) {
   const pipeline = [
     gulp.src( imgSources ),
     imagemin( [
-      imagemin.gifsicle(),
-      // imagemin.jpegtran(),
-      imagemin.optipng(),
-      imagemin.svgo(),
+      imageminGifsicle(),
+      // imageminJpegtran(),
+      // imageminMozjpeg(),
+      imageminOptipng(),
+      imageminSvgo(),
     ], {
       "verbose": true,
     } ),
@@ -158,9 +164,9 @@ gulp.task( 'img', ( cb ) => {
 
 gulp.task( 'img-postprocess', ( cb ) => {
   processImages( 'public', 'dist' );
-  png2webp( 'dist', 'dist' );
-  processImages( 'public', 'ja' );
-  png2webp( 'ja', 'ja', cb );
+  png2webp( 'dist', 'dist', cb );
+  // processImages( 'public', 'ja' );
+  // png2webp( 'ja', 'ja', cb );
 } );
 
 gulp.task( 'img-postprocess-ja', ( cb ) => {
@@ -173,6 +179,38 @@ gulp.task( 'delocalize', ( cb ) => {
     replace( '//local.', '//' ),
     gulp.dest( './dist/' ),
   ], cb );
+} );
+
+// NOTE: '.eot's do not get subsetted by glyphhanger
+gulp.task( 'font-subsets', ( cb ) => {
+  pump(
+    [
+      gulp.src( './dist/**/*.css' ),
+      replace( /(LeagueGothic-[^-]+)\.(ttf|otf|woff|woff2)/g, '$1-subset.$2' ),
+      gulp.dest( './dist/' ),
+    ],
+    () => {
+      pump(
+        [
+          gulp.src( './dist/**/*.css' ),
+          replace( /(fonts\/skolar-sans\/)(?:web|ttf|otf)\/(SkolarSansPE)(?:Web)?(-[^-]+)\.(ttf|otf|woff|woff2)/g, '$1$2$3-subset.$4' ),
+          gulp.dest( './dist/' ),
+        ],
+        () => {
+          // Accord Alternate is pre-subsetted so we can skip NoSpoon and Productions
+          // TODO: Un-pre-subset
+          pump(
+            [
+              gulp.src( './dist/**/*.css' ),
+              replace( /(?<!NoSpoon|Productions)\.woff(['"]?(?:\s+)?\))/g, '.zopfli.woff$1' ),
+              gulp.dest( './dist/' ),
+            ],
+            cb,
+          );
+        },
+      );
+    },
+  );
 } );
 
 function processAudio( source = 'public', dest = 'dist', cb ) {
@@ -189,8 +227,8 @@ gulp.task( 'audio', ( cb ) => {
 } );
 
 gulp.task( 'audio-postprocess', ( cb ) => {
-  processAudio( 'dist', 'dist' );
-  processAudio( 'ja', 'ja', cb );
+  processAudio( 'dist', 'dist', cb );
+  // processAudio( 'ja', 'ja', cb );
 } );
 
 function processFavicon( source = 'public', dest = 'dist', cb = noop ) {
@@ -207,14 +245,14 @@ gulp.task( 'favicon', ( cb ) => {
 } );
 
 gulp.task( 'favicon-postprocess', ( cb ) => {
-  processFavicon( 'dist', 'dist' );
-  processFavicon( 'ja', 'ja', cb );
+  processFavicon( 'dist', 'dist', cb );
+  // processFavicon( 'ja', 'ja', cb );
 } );
 
 function revision( source = 'dist', dest = 'dist', cb = noop ) {
-  // @todo - Fonts are broken because rev-css-url does not replace inside @font-face for some reason (even though it claims to)
+  // TODO: - Fonts are broken because rev-css-url does not replace inside @font-face for some reason (even though it claims to)
   pump( [
-    gulp.src( `${source}/**/*.{ico,png,gif,jpg,jpeg,jxr,webp,bpg,bmp,svg,js,css}` ), // eot,otf,woff,woff2
+    gulp.src( `${source}/**/*.{ico,png,gif,jpg,jpeg,jxr,webp,bpg,bmp,svg,js,css,eot,ttf,otf,woff,woff2}` ),
     rev(),
     revCssUrl(),
     revDelete(),
@@ -227,16 +265,16 @@ function revision( source = 'dist', dest = 'dist', cb = noop ) {
 gulp.task( 'rev', ( cb ) => {
   revision( 'dist', 'dist', cb );
 } );
-// @todo: en and ja should share assets instead of having duplicates
+// TODO: en and ja should share assets instead of having duplicates
 gulp.task( 'rev-ja', ( cb ) => {
   revision( 'ja', 'ja', cb );
 } );
 
 function revisionRewrite( source = 'dist', dest = 'dist', cb = noop ) {
   pump( [
-    gulp.src( `${source}/**/index.html` ),
+    gulp.src( `${source}/**/*.{html,css,js}` ),
     revRewrite( {
-      "manifest": gulp.src( `${dest}/rev-manifest.json` ),
+      "manifest": fs.readFileSync( `${dest}/rev-manifest.json` ),
     } ),
     gulp.dest( `${dest}` ),
   ], cb );
@@ -280,7 +318,7 @@ gulp.task(
   gulp.series(
     gulp.parallel(
       'cssmin-postprocess',
-      'fonts-postprocess',
+      // 'fonts-postprocess',
       'htmlmin-postprocess',
       'jsmin-postprocess',
       'audio-postprocess',
@@ -288,9 +326,10 @@ gulp.task(
     ),
     'img-postprocess',
     'delocalize',
+    'font-subsets',
     'rev',
-    'rev-ja',
+    // 'rev-ja',
     'rev-rewrite',
-    'rev-rewrite-ja',
+    // 'rev-rewrite-ja',
   ),
 );

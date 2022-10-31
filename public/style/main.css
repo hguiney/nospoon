@@ -3,12 +3,12 @@
   font-weight: bold;
   font-style: normal;
   font-display: block;
-  src: url('fonts/accord-alternate/NoSpoon.eot');
-  src: url('fonts/accord-alternate/NoSpoon.eot?#iefix') format('embedded-opentype'),
-    url('fonts/accord-alternate/NoSpoon.woff2') format('woff2'),
-    url('fonts/accord-alternate/NoSpoon.woff') format('woff'),
-    url('fonts/accord-alternate/NoSpoon.otf') format('opentype'),
-    url('fonts/accord-alternate/NoSpoon.ttf') format('truetype');
+  src: url('/style/fonts/accord-alternate/NoSpoon.eot');
+  src: url('/style/fonts/accord-alternate/NoSpoon.eot?#iefix') format('embedded-opentype'),
+    url('/style/fonts/accord-alternate/NoSpoon.woff2') format('woff2'),
+    url('/style/fonts/accord-alternate/NoSpoon.woff') format('woff'),
+    url('/style/fonts/accord-alternate/NoSpoon.otf') format('opentype'),
+    url('/style/fonts/accord-alternate/NoSpoon.ttf') format('truetype');
 }
 
 @font-face {
@@ -16,12 +16,12 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('fonts/accord-alternate/Productions.eot');
-  src: url('fonts/accord-alternate/Productions.eot?#iefix') format('embedded-opentype'),
-    url('fonts/accord-alternate/Productions.woff2') format('woff2'),
-    url('fonts/accord-alternate/Productions.woff') format('woff'),
-    url('fonts/accord-alternate/Productions.otf') format('opentype'),
-    url('fonts/accord-alternate/Productions.ttf') format('truetype');
+  src: url('/style/fonts/accord-alternate/Productions.eot');
+  src: url('/style/fonts/accord-alternate/Productions.eot?#iefix') format('embedded-opentype'),
+    url('/style/fonts/accord-alternate/Productions.woff2') format('woff2'),
+    url('/style/fonts/accord-alternate/Productions.woff') format('woff'),
+    url('/style/fonts/accord-alternate/Productions.otf') format('opentype'),
+    url('/style/fonts/accord-alternate/Productions.ttf') format('truetype');
 }
 
 @font-face {
@@ -29,12 +29,12 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('fonts/league-gothic/LeagueGothic-Regular.eot');
-  src: url('fonts/league-gothic/LeagueGothic-Regular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/league-gothic/LeagueGothic-Regular.woff2') format('woff2'),
-    url('fonts/league-gothic/LeagueGothic-Regular.woff') format('woff'),
-    url('fonts/league-gothic/LeagueGothic-Regular.otf') format('opentype'),
-    url('fonts/league-gothic/LeagueGothic-Regular.ttf') format('truetype');
+  src: url('/style/fonts/league-gothic/LeagueGothic-Regular.eot');
+  src: url('/style/fonts/league-gothic/LeagueGothic-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/style/fonts/league-gothic/LeagueGothic-Regular.woff2') format('woff2'),
+    url('/style/fonts/league-gothic/LeagueGothic-Regular.woff') format('woff'),
+    url('/style/fonts/league-gothic/LeagueGothic-Regular.otf') format('opentype'),
+    url('/style/fonts/league-gothic/LeagueGothic-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -42,12 +42,12 @@
   font-weight: normal;
   font-style: italic;
   font-display: block;
-  src: url('fonts/league-gothic/LeagueGothic-Italic.eot');
-  src: url('fonts/league-gothic/LeagueGothic-Italic.eot?#iefix') format('embedded-opentype'),
-    url('fonts/league-gothic/LeagueGothic-Italic.woff2') format('woff2'),
-    url('fonts/league-gothic/LeagueGothic-Italic.woff') format('woff'),
-    url('fonts/league-gothic/LeagueGothic-Italic.otf') format('opentype'),
-    url('fonts/league-gothic/LeagueGothic-Italic.ttf') format('truetype');
+  src: url('/style/fonts/league-gothic/LeagueGothic-Italic.eot');
+  src: url('/style/fonts/league-gothic/LeagueGothic-Italic.eot?#iefix') format('embedded-opentype'),
+    url('/style/fonts/league-gothic/LeagueGothic-Italic.woff2') format('woff2'),
+    url('/style/fonts/league-gothic/LeagueGothic-Italic.woff') format('woff'),
+    url('/style/fonts/league-gothic/LeagueGothic-Italic.otf') format('opentype'),
+    url('/style/fonts/league-gothic/LeagueGothic-Italic.ttf') format('truetype');
 }
 
 @font-face {
@@ -55,13 +55,13 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Rg.eot'); */
-  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Rg.eot?#iefix') format('embedded-opentype'), */
+  /* src: url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Rg.eot'); */
+  /* src: url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Rg.eot?#iefix') format('embedded-opentype'), */
   src:
-    url('fonts/skolar-sans/web/SkolarSansPEWeb-Rg.woff2') format('woff2'),
-    url('fonts/skolar-sans/web/SkolarSansPEWeb-Rg.woff') format('woff'),
-    url('fonts/skolar-sans/otf/SkolarSansPE-Rg.otf') format('opentype'),
-    url('fonts/skolar-sans/ttf/SkolarSansPE-Rg.ttf') format('truetype');
+    url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Rg.woff2') format('woff2'),
+    url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Rg.woff') format('woff'),
+    url('/style/fonts/skolar-sans/otf/SkolarSansPE-Rg.otf') format('opentype'),
+    url('/style/fonts/skolar-sans/ttf/SkolarSansPE-Rg.ttf') format('truetype');
 }
 
 @font-face {
@@ -69,13 +69,13 @@
   font-weight: normal;
   font-style: italic;
   font-display: block;
-  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-It.eot'); */
-  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-It.eot?#iefix') format('embedded-opentype'), */
+  /* src: url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-It.eot'); */
+  /* src: url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-It.eot?#iefix') format('embedded-opentype'), */
   src:
-    url('fonts/skolar-sans/web/SkolarSansPEWeb-It.woff2') format('woff2'),
-    url('fonts/skolar-sans/web/SkolarSansPEWeb-It.woff') format('woff'),
-    url('fonts/skolar-sans/otf/SkolarSansPE-It.otf') format('opentype'),
-    url('fonts/skolar-sans/ttf/SkolarSansPE-It.ttf') format('truetype');
+    url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-It.woff2') format('woff2'),
+    url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-It.woff') format('woff'),
+    url('/style/fonts/skolar-sans/otf/SkolarSansPE-It.otf') format('opentype'),
+    url('/style/fonts/skolar-sans/ttf/SkolarSansPE-It.ttf') format('truetype');
 }
 
 @font-face {
@@ -83,13 +83,13 @@
   font-weight: bold;
   font-style: normal;
   font-display: block;
-  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot'); */
-  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot?#iefix') format('embedded-opentype'), */
+  /* src: url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot'); */
+  /* src: url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot?#iefix') format('embedded-opentype'), */
   src:
-    url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.woff2') format('woff2'),
-    url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.woff') format('woff'),
-    url('fonts/skolar-sans/otf/SkolarSansPE-Bd.otf') format('opentype'),
-    url('fonts/skolar-sans/ttf/SkolarSansPE-Bd.ttf') format('truetype');
+    url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Bd.woff2') format('woff2'),
+    url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Bd.woff') format('woff'),
+    url('/style/fonts/skolar-sans/otf/SkolarSansPE-Bd.otf') format('opentype'),
+    url('/style/fonts/skolar-sans/ttf/SkolarSansPE-Bd.ttf') format('truetype');
 }
 
 @font-face {
@@ -97,13 +97,13 @@
   font-weight: bold;
   font-style: italic;
   font-display: block;
-  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot'); */
-  /* src: url('fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot?#iefix') format('embedded-opentype'), */
+  /* src: url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot'); */
+  /* src: url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-Bd.eot?#iefix') format('embedded-opentype'), */
   src:
-    url('fonts/skolar-sans/web/SkolarSansPEWeb-BdIt.woff2') format('woff2'),
-    url('fonts/skolar-sans/web/SkolarSansPEWeb-BdIt.woff') format('woff'),
-    url('fonts/skolar-sans/otf/SkolarSansPE-BdIt.otf') format('opentype'),
-    url('fonts/skolar-sans/ttf/SkolarSansPE-BdIt.ttf') format('truetype');
+    url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-BdIt.woff2') format('woff2'),
+    url('/style/fonts/skolar-sans/web/SkolarSansPEWeb-BdIt.woff') format('woff'),
+    url('/style/fonts/skolar-sans/otf/SkolarSansPE-BdIt.otf') format('opentype'),
+    url('/style/fonts/skolar-sans/ttf/SkolarSansPE-BdIt.ttf') format('truetype');
 }
 
 * {
