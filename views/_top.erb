@@ -27,15 +27,9 @@
     <meta name="twitter:image" content="https://nospoon.productions/img/no-spoon-productions-twitter-image.jpg" />
     <meta name="twitter:image:alt" content="No Spoon Productions logo superimposed over a black-and-white aerial shot of Boston, Massachusetts from the waterfront" />
 
+    <link rel="canonical" href="https://nospoon.productions<%= request.fullpath %>" />
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32 64x64 128x128 256x256" href="/favicon.ico" />
     <link rel="stylesheet" href="/style/main.css" />
-    <%# <link rel="stylesheet" href="/style/checkout.css" /> %>
-    <%# <link rel="preload" as="style" href="https://use.typekit.net/uys3rrk.css" onload="this.rel = 'stylesheet'" /> %>
-    <%# <link rel="preload" as="style" href="/style/fonts/noto-sans-latin-ext.css" onload="this.rel = 'stylesheet'" /> %>
-    <%# <noscript>
-      <link rel="stylesheet" href="/style/fonts/noto-sans-latin-ext.css" />
-      <link rel="stylesheet" href="/style/fonts/noto-sans-japanese.css" />
-    </noscript> %>
   </head>
   <body>
     <div class="shading<%= ' shading--splash' if defined? splash %>">
