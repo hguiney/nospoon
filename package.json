@@ -33,7 +33,8 @@
     "yaml2json": "yaml2json data/ --pretty --save --recursive",
     "log": "subl /usr/local/var/log/httpd/error_log",
     "dev": "rerun rackup",
-    "subset": "./subset.sh"
+    "subset": "./subset.sh",
+    "postinstall": "brew install ruby-install chruby && ruby-install 3.0.2 && chruby 3.0.2 && bundle install"
   },
   "dependencies": {
     "apache-server-configs": "^3.0.0",
