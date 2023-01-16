@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="250"
+   height="250"
+   viewBox="0 0 66.14583 66.145835"
+   version="1.1"
+   id="svg1291"
+   sodipodi:docname="LinkedIn_2021.svg"
+   inkscape:export-filename="linkedin-logo.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1285" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="996.28572"
+     inkscape:cy="-674.20459"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1" />
+  <metadata
+     id="metadata1288">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-27.063084,201.93615)">
+    <g
+       class="scaling-icon"
+       id="g1917"
+       transform="matrix(3.1498015,0,0,3.1498015,-171.37441,-202.2851)"
+       style="stroke-width:0.084">
+      <g
+         class="logo-21dp"
+         id="g1915"
+         style="stroke-width:0.084">
+        <g
+           class="dpi-1"
+           id="g1913"
+           style="stroke-width:0.084">
+          <g
+             style="fill:none;fill-rule:evenodd;stroke-width:0.084"
+             class="inbug"
+             id="g1905">
+            <path
+               style="fill:#ffffff;fill-opacity:1;stroke-width:0.084"
+               inkscape:connector-curvature="0"
+               d="M 82.479,0.11078518 H 64.583 c -0.856,0 -1.583,0.677 -1.583,1.51100002 V 19.598785 c 0,0.835 0.477,1.512 1.333,1.512 h 17.896 c 0.857,0 1.771,-0.677 1.771,-1.512 V 1.6217852 C 84,0.78778518 83.336,0.11078518 82.479,0.11078518 Z M 71,8.1107847 h 2.827 v 1.441 h 0.031 c 0.431,-0.777 1.704,-1.566 3.278,-1.566 3.021,0 3.864,1.604 3.864,4.5750003 v 5.55 h -3 v -5.003 c 0,-1.33 -0.531,-2.497 -1.773,-2.497 -1.508,0 -2.227,1.021 -2.227,2.697 v 4.803 H 71 Z M 66,18.110785 h 3 V 8.1107847 H 66 Z M 69.375,4.6107847 a 1.8745001,1.8745001 0 1 1 -3.749,0.001 1.8745001,1.8745001 0 0 1 3.749,-0.001 z"
+               class="background"
+               id="path1903" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
