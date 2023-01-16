@@ -26,7 +26,7 @@
     "progressive": "find ./public/img/source/ -type f -name \"*.jpg\" -exec jpegtran -outfile {}.prog -progressive {} \\; && rename \"s/jpg.prog/prog.jpg/\" ./public/img/source/*.prog",
     "static": "./static.sh",
     "local": "./local.sh",
-    "build": "yarn local && yarn static && yarn subset && gulp postprocess",
+    "build": "yarn local && yarn static && yarn subset && gulp update && gulp postprocess",
     "upload": "yarn sync",
     "update": "yarn build && yarn upload",
     "sync": "ssh architect@hughguiney.com \"rm -rf /var/www/nospoon-site/public/dist/\"; scp -r dist/ architect@hughguiney.com:/var/www/nospoon-site/public/dist/",

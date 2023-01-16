@@ -30,9 +30,9 @@ gulp.task( 'del', () => deleteAsync( ['./dist/', './ja'] ) );
 function processCSS( source = 'src', dest = 'dist', cb = noop ) {
   const plugins = [
     autoprefixer(),
-    purgecss( {
-      "content": [`./${source}/**/*.html`],
-    } ),
+    // purgecss( {
+    //   "content": [`./${source}/**/*.html`],
+    // } ),
     // cssnano(),
   ];
 
